@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f4ec">
+<meta name="description" content="東京、鎌倉、富士山五日一週年紀念旅行手帳：每日景點、交通提醒、地圖連結與溫柔手繪插圖。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="戀愛一週年旅行手帳｜東京・鎌倉・富士山">
+<meta property="og:description" content="把喜歡的日常，收進一趟小旅行裡。一起收藏東京下町、湘南海岸、富士山與紀念回憶。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f5e6dc'/%3E%3Cpath d='M32 48S10 35 10 21c0-12 15-15 22-3 7-12 22-9 22 3 0 14-22 27-22 27Z' fill='%23d48668'/%3E%3C/svg%3E">
 <title>戀愛一週年旅行手帳｜東京・鎌倉・富士山</title>
 <style>
   :root{
@@ -90,9 +95,51 @@
   }
   @media(max-width:420px){.wrap{width:calc(100% - 24px)}.topline{font-size:.72rem}.top-tag{font-size:.68rem}.hero{border-radius:24px}h1{font-size:2.2rem}.day-card{border-radius:20px}.section-heading{align-items:flex-start;flex-direction:column;gap:5px}.day-date{order:-1}}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+  .skip-link{position:fixed;left:12px;top:12px;z-index:1000;transform:translateY(-160%);background:var(--ink);color:#fff;padding:9px 14px;border-radius:10px;text-decoration:none;font-weight:800}
+  .skip-link:focus{transform:translateY(0);outline:3px solid var(--honey);outline-offset:3px}
+  .reading-progress{position:fixed;inset:0 0 auto;height:4px;z-index:1001;background:rgba(214,182,109,.18);pointer-events:none}
+  .reading-progress span{display:block;height:100%;width:0;background:var(--terracotta);transition:width .08s linear}
+  :focus-visible{outline:3px solid #9b7952;outline-offset:3px;border-radius:5px}
+  .nav-hint{margin:3px 2px 0;font-size:.72rem;color:var(--muted);text-align:right}
+  .day-nav-wrap{position:sticky}
+  .day-nav a:focus-visible{outline-offset:2px}
+  .stop-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin:0 0 4px}
+  .stop-heading h3{flex:1;min-width:0;margin:0}
+  .stop-map{flex:0 0 auto;display:inline-flex;align-items:center;gap:3px;color:#526957;background:#f1f4ed;border:1px solid #e2e9dd;padding:3px 8px;border-radius:999px;text-decoration:none;font-size:.7rem;font-weight:800;line-height:1.6;white-space:nowrap}
+  .stop-map:hover{background:var(--sage-pale);border-color:#bccbb9}
+  .stop-map:focus-visible{outline-offset:2px}
+  .optional-tag{background:#f7efdc;color:#8a7341}
+  @media(max-width:780px){.nav-hint{display:block}.stop-heading{gap:8px}.stop-map{font-size:.68rem;padding:3px 7px}}
+  @media(min-width:781px){.nav-hint{display:none}}
+  @media print{
+    @page{margin:12mm}
+    body{background:#fff!important;color:#222;font-size:10pt;letter-spacing:0}
+    .wrap{width:100%;max-width:none;margin:0}
+    .reading-progress,.skip-link,.day-nav-wrap,.back-top{display:none!important}
+    .topline{padding:0 0 8px}
+    .hero,.info-card,.hotel-row,.day-card,.preflight,.flight-back{box-shadow:none!important;break-inside:avoid;background:#fff!important;border-color:#ccc!important}
+    .hero{grid-template-columns:1.1fr .9fr;padding:18px;border-radius:12px}
+    .hero-art{max-width:250px}
+    .travel-grid{grid-template-columns:repeat(3,1fr);gap:7px}
+    .info-card{padding:10px}
+    .hotel-row{padding:10px}
+    .section-label{margin-top:18px}
+    .day-card{grid-template-columns:150px minmax(0,1fr);gap:16px;padding:14px;margin-bottom:12px;border-radius:12px;break-inside:auto}
+    .art-panel{position:static;top:auto;min-height:unset;padding:10px;border-radius:10px;align-self:start}
+    .day-art{max-width:130px}
+    .stop{break-inside:avoid;padding-bottom:10px}
+    .stop p,.day-intro,.callout,.info-card p{color:#444!important}
+    .stop-map{color:#333;background:#fff;border-color:#bbb;padding:1px 5px;font-size:7pt}
+    .footer{padding:15px 0 0}
+    a{text-decoration:none}
+  }
+
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">跳至主要行程</a>
+<div class="reading-progress" id="reading-progress" role="progressbar" aria-label="頁面閱讀進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="reading-progress-bar"></span></div>
 <div class="wrap" id="top">
   <div class="topline">
     <div class="brand"><span class="brand-mark" aria-hidden="true">♥</span><span>小日子旅行手帳</span></div>
@@ -173,9 +220,10 @@
       <a href="#day4"><span class="nav-num">04</span>11/18 木更津購物</a>
       <a href="#day5"><span class="nav-num">05</span>11/19 神樂坂</a>
     </nav>
+    <p class="nav-hint"><span aria-hidden="true">↔</span> 手機上可左右滑動日期，快速跳至想去的地方</p>
   </div>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="day-card" id="day1" aria-labelledby="day1-title">
       <aside class="art-panel rose">
         <svg class="day-art" viewBox="0 0 220 190" role="img" aria-label="咖啡杯、和菓子與日式街屋插畫">
@@ -199,22 +247,22 @@
         <p class="day-intro">抵達東京後，用老街、庭園、茶香和街頭小吃，輕輕打開這趟一週年旅行。</p>
         <div class="timeline">
           <article class="stop">
-            <h3>01｜清澄白河・釜飯・清澄庭園</h3>
+            <div class="stop-heading"><h3>01｜清澄白河・釜飯・清澄庭園</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%B8%85%E6%BE%84%E5%BA%AD%E5%9C%92%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：01｜清澄白河・釜飯・清澄庭園">地圖 ↗</a></div>
             <p>先在融合老街、藝術與咖啡文化的清澄白河走走，品嚐以高湯與食材一同炊煮、香氣飽滿的釜飯。接著到清澄庭園，欣賞池塘、石燈籠與日式庭園景致，享受片刻安靜。</p>
             <div class="stop-tags"><span class="mini-tag">老街咖啡</span><span class="mini-tag">日本庭園</span><span class="mini-tag">釜飯</span></div>
           </article>
           <article class="stop">
-            <h3>02｜人形町・壽堂黃金芋・焙茶</h3>
+            <div class="stop-heading"><h3>02｜人形町・壽堂黃金芋・焙茶</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E5%A3%BD%E5%A0%82%20%E9%BB%83%E9%87%91%E8%8A%8B%20%E4%BA%BA%E5%BD%A2%E7%94%BA%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：02｜人形町・壽堂黃金芋・焙茶">地圖 ↗</a></div>
             <p>沿著有江戶風情的人形町尋訪和菓子老舖。可以留意壽堂的黃金芋，再搭配香氣溫暖、苦澀感較低的焙茶，安排一段甜點與茶的悠閒時間。</p>
             <div class="stop-tags"><span class="mini-tag">和菓子</span><span class="mini-tag">傳統茶舖</span></div>
           </article>
           <article class="stop">
-            <h3>03｜戶越銀座商店街・米食點心巡禮</h3>
+            <div class="stop-heading"><h3>03｜戶越銀座商店街・米食點心巡禮</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%88%B6%E8%B6%8A%E9%8A%80%E5%BA%A7%E5%95%86%E5%BA%97%E8%A1%97%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：03｜戶越銀座商店街・米食點心巡禮">地圖 ↗</a></div>
             <p>走進在地人喜愛的長型商店街，邊逛邊找喜歡的小吃：醬油或黃豆粉口味的米糰子、柔軟有彈性的米麵包，還有鮭魚、梅干或昆布等口味的日式飯糰。</p>
             <div class="stop-tags"><span class="mini-tag">米糰子</span><span class="mini-tag">米麵包</span><span class="mini-tag">飯糰</span></div>
           </article>
         </div>
-        <div class="callout">♡ 這天從清晨抵達開始，建議把步調放鬆一些；店家營業時間與各點移動順序，可依精神和交通狀況調整。</div>
+        <div class="callout">♡ 這天從清晨抵達開始，建議先確認行李寄放、早餐與休息安排，再決定移動節奏。三個區域跨度不小，若精神或交通狀況不理想，可把戶越銀座列為彈性行程；各店營業時間請出發前再確認。</div>
       </div>
     </section>
 
@@ -247,20 +295,20 @@
         <p class="day-intro">從古都寺院出發，沿著湘南海岸追尋青春動畫場景，再用橫濱港灣夜景收尾。</p>
         <div class="timeline">
           <article class="stop">
-            <h3>01｜鎌倉・高德院鎌倉大佛</h3>
+            <div class="stop-heading"><h3>01｜鎌倉・高德院鎌倉大佛</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%BE%B7%E9%99%A2%20%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BD%9B" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：01｜鎌倉・高德院鎌倉大佛">地圖 ↗</a></div>
             <p>走訪曾是鎌倉幕府政治中心的古都，在寺院與傳統街景間散步。高德院的青銅阿彌陀如來坐像建於 13 世紀，是鎌倉的重要代表地標。</p>
           </article>
           <article class="stop">
-            <h3>02｜鎌倉高校前平交道</h3>
+            <div class="stop-heading"><h3>02｜鎌倉高校前平交道</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85%20%E5%B9%B3%E4%BA%A4%E9%81%93" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：02｜鎌倉高校前平交道">地圖 ↗</a></div>
             <p>朝聖《灌籃高手》經典開場畫面。江之電列車、平交道與湘南海面交會，是很有辨識度的海岸風景；拍照時請留意道路與鐵道安全。</p>
-            <div class="stop-tags"><span class="mini-tag">動畫巡禮</span><span class="mini-tag">湘南海景</span></div>
+            <div class="stop-tags"><span class="mini-tag">動畫巡禮</span><span class="mini-tag">湘南海景</span><span class="mini-tag optional-tag">留意人潮與交通</span></div>
           </article>
           <article class="stop">
-            <h3>03｜江之電・湘南單軌電車</h3>
-            <p>搭乘行經住宅街、寺院與海岸的復古江之電；再體驗車廂懸吊在軌道下方、像雲霄飛車般的湘南單軌電車。兩者是不同路線，出發前確認銜接方式較安心。</p>
+            <div class="stop-heading"><h3>03｜江之電・湘南單軌電車</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%B1%9F%E4%B9%8B%E9%9B%BB%20%E9%8E%8C%E5%80%89%E9%A7%85%20%E6%B9%98%E5%8D%97%E5%96%AE%E8%BB%8C%E9%9B%BB%E8%BB%8A%20%E6%B9%98%E5%8D%97%E6%B1%9F%E4%B9%8B%E5%B3%B6%E9%A7%85" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：03｜江之電・湘南單軌電車">地圖 ↗</a></div>
+            <p>搭乘行經住宅街、寺院與海岸的復古江之電；再體驗車廂懸吊在軌道下方、像雲霄飛車般的湘南單軌電車。兩者是不同路線，出發前確認銜接方式較安心。</p><div class="stop-tags"><span class="mini-tag optional-tag">湘南單軌可視時間彈性取捨</span></div>
           </article>
           <article class="stop">
-            <h3>04｜橫濱港未來・紅磚倉庫</h3>
+            <div class="stop-heading"><h3>04｜橫濱港未來・紅磚倉庫</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%A9%AB%E6%BF%B1%E7%B4%85%E7%A3%9A%E5%80%89%E5%BA%AB" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：04｜橫濱港未來・紅磚倉庫">地圖 ↗</a></div>
             <p>前往港未來 21 海濱一帶散步、購物與欣賞夜景。摩天大樓、港灣步道與保留歷史風貌的紅磚倉庫，呈現新舊交融的城市氣氛。</p>
             <div class="stop-tags"><span class="mini-tag">港灣夜景</span><span class="mini-tag">紅磚倉庫</span></div>
           </article>
@@ -294,14 +342,14 @@
         <p class="day-intro">白天到雪場感受冬季運動，回到東京後再為裝備與日常運動用品補貨。</p>
         <div class="timeline">
           <article class="stop">
-            <h3>01｜富士山 YETI 滑雪場</h3>
+            <div class="stop-heading"><h3>01｜富士山 YETI 滑雪場</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=Snow%20Town%20Yeti%20%E6%BB%91%E9%9B%AA%E5%A0%B4%20%E9%9D%9C%E5%B2%A1" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：01｜富士山 YETI 滑雪場">地圖 ↗</a></div>
             <p>在富士山腳下體驗雪地活動。若是初次滑雪，可以先了解雙板或單板的入門選項，並依需求租借裝備，在安全範圍內享受雪上時光。</p>
             <div class="stop-tags"><span class="mini-tag">滑雪體驗</span><span class="mini-tag">雪景</span></div>
           </article>
           <article class="stop">
-            <h3>02｜Alpen TOKYO 新宿</h3>
+            <div class="stop-heading"><h3>02｜Alpen TOKYO 新宿</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=Alpen%20TOKYO%20%E6%96%B0%E5%AE%BF" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：02｜Alpen TOKYO 新宿">地圖 ↗</a></div>
             <p>逛逛運動服飾、戶外用品與各類運動裝備。事先列好購物清單，再依樓層與商品分類挑選，會更有效率。</p>
-            <div class="stop-tags"><span class="mini-tag">運動用品</span><span class="mini-tag">新宿購物</span></div>
+            <div class="stop-tags"><span class="mini-tag">運動用品</span><span class="mini-tag">新宿購物</span><span class="mini-tag optional-tag">視滑雪返程時間調整</span></div>
           </article>
         </div>
         <div class="callout">♡ 雪場交通可能需要較多轉乘與等待，請事先確認當日雪況、營業資訊、租借方式及往返交通；若回東京時間較晚，Alpen 可視體力調整成短逛。</div>
@@ -332,22 +380,22 @@
         <p class="day-intro">把白天留給 Outlet 慢慢挖寶，回到東京後，再用紅磚建築、伴手禮與日常採買補滿行李箱。</p>
         <div class="timeline">
           <article class="stop">
-            <h3>01｜三井 Outlet Park 木更津</h3>
+            <div class="stop-heading"><h3>01｜三井 Outlet Park 木更津</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E4%BA%95%20Outlet%20Park%20%E6%9C%A8%E6%9B%B4%E6%B4%A5" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：01｜三井 Outlet Park 木更津">地圖 ↗</a></div>
             <p>逛逛國際品牌、日本服飾、運動用品、鞋包與生活雜貨。先列好想買的品牌，再留出用餐、休息與結帳時間，也別忘記確認往返巴士班次。</p>
             <div class="stop-tags"><span class="mini-tag">Outlet 折扣</span><span class="mini-tag">品牌採購</span></div>
           </article>
           <article class="stop">
-            <h3>02｜東京車站丸之內側</h3>
+            <div class="stop-heading"><h3>02｜東京車站丸之內側</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E8%BB%8A%E7%AB%99%20%E4%B8%B8%E4%B9%8B%E5%85%A7%E5%81%B4" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：02｜東京車站丸之內側">地圖 ↗</a></div>
             <p>欣賞修復後的經典紅磚站體，感受歷史建築與周圍現代商辦交織的城市風景。</p>
           </article>
           <article class="stop">
-            <h3>03｜東京車站一番街</h3>
+            <div class="stop-heading"><h3>03｜東京車站一番街</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E8%BB%8A%E7%AB%99%E4%B8%80%E7%95%AA%E8%A1%97" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：03｜東京車站一番街">地圖 ↗</a></div>
             <p>前往東京動漫人物街尋找喜歡的角色周邊，再逛東京伴手禮區，挑選餅乾、蛋糕或知名甜點帶回家。</p>
             <div class="stop-tags"><span class="mini-tag">動漫周邊</span><span class="mini-tag">東京伴手禮</span></div>
           </article>
           <article class="stop">
-            <h3>04｜OK 超市</h3>
-            <p>以平價日常食品與飲料採買作為補充行程，適合購入零食、飲品或回住宿享用的小東西。分店可依當天的交通動線選擇。</p>
+            <div class="stop-heading"><h3>04｜OK 超市</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=OK%20%E8%B6%85%E5%B8%82%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：04｜OK 超市">地圖 ↗</a></div>
+            <p>以平價日常食品與飲料採買作為補充行程，適合購入零食、飲品或回住宿享用的小東西。分店可依當天的交通動線選擇。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性採買；先確認分店位置</span></div>
           </article>
         </div>
         <div class="callout">♡ Outlet 很容易不知不覺逛久，建議先看好回東京的巴士時刻；戰利品也可以預留空間，讓最後幾天的採買更從容。</div>
@@ -376,12 +424,12 @@
         <p class="day-intro">回程前用優雅的東京巷弄收尾，走過石板小路、找間喜歡的咖啡館，再到風格清新的神社參拜。</p>
         <div class="timeline">
           <article class="stop">
-            <h3>01｜神樂坂</h3>
+            <div class="stop-heading"><h3>01｜神樂坂</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E6%A8%82%E5%9D%82%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：01｜神樂坂">地圖 ↗</a></div>
             <p>沿著石板小巷散步，看看傳統料亭、和菓子店、特色餐館，也能遇見法式餐廳、咖啡館與文藝小店。把最後一天留給沒有目的地的慢慢走。</p>
             <div class="stop-tags"><span class="mini-tag">石板小巷</span><span class="mini-tag">咖啡與小店</span></div>
           </article>
           <article class="stop">
-            <h3>02｜赤城神社</h3>
+            <div class="stop-heading"><h3>02｜赤城神社</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E8%B5%A4%E5%9F%8E%E7%A5%9E%E7%A4%BE%20%E7%A5%9E%E6%A8%82%E5%9D%82%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：02｜赤城神社">地圖 ↗</a></div>
             <p>參拜祈求良緣、家庭平安與生活順遂。社殿由建築師隈研吾參與設計，將玻璃、簡潔線條與傳統神社空間結合，呈現清新又現代的樣貌。</p>
           </article>
         </div>
@@ -411,20 +459,58 @@
 <script>
   (() => {
     const links = [...document.querySelectorAll('.day-nav a')];
+    const nav = document.querySelector('.day-nav');
     const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
-    if (!('IntersectionObserver' in window)) return;
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        links.forEach(link => {
-          const active = link.getAttribute('href') === `#${entry.target.id}`;
-          link.classList.toggle('active', active);
-          if (active) link.setAttribute('aria-current', 'location');
-          else link.removeAttribute('aria-current');
-        });
+    const progress = document.getElementById('reading-progress');
+    const progressBar = document.getElementById('reading-progress-bar');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let activeId = '';
+    const setActive = (target) => {
+      if (!target || activeId === target.id) return;
+      activeId = target.id;
+      let activeLink = null;
+      links.forEach(link => {
+        const active = link.getAttribute('href') === `#${target.id}`;
+        link.classList.toggle('active', active);
+        if (active) {
+          link.setAttribute('aria-current', 'location');
+          activeLink = link;
+        } else {
+          link.removeAttribute('aria-current');
+        }
       });
-    }, { rootMargin: '-22% 0px -62% 0px', threshold: 0 });
-    sections.forEach(section => observer.observe(section));
+      if (activeLink && nav && window.matchMedia('(max-width: 780px)').matches) {
+        const left = activeLink.offsetLeft - (nav.clientWidth - activeLink.offsetWidth) / 2;
+        nav.scrollTo({ left: Math.max(0, left), behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+    };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries.filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActive(visible.target);
+      }, { rootMargin: '-18% 0px -58% 0px', threshold: [0, 0.1, 0.25, 0.5] });
+      sections.forEach(section => observer.observe(section));
+    }
+
+    let scheduled = false;
+    const updateProgress = () => {
+      scheduled = false;
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = scrollable > 0 ? Math.min(100, Math.max(0, (window.scrollY / scrollable) * 100)) : 100;
+      if (progressBar) progressBar.style.width = `${percent}%`;
+      if (progress) progress.setAttribute('aria-valuenow', String(Math.round(percent)));
+    };
+    const requestProgressUpdate = () => {
+      if (scheduled) return;
+      scheduled = true;
+      window.requestAnimationFrame(updateProgress);
+    };
+    window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+    window.addEventListener('resize', requestProgressUpdate);
+    updateProgress();
   })();
 </script>
 </body>
