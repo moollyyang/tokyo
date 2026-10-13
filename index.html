@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#f7f4ec" name="theme-color"/>
-<meta content="東京、鎌倉、富士山七日行程手帳：含出發夜、每日交通與費用、餐廳推薦、景點地圖及旅費預算。" name="description"/>
+<meta content="東京、鎌倉、富士山七日旅行手帳：含每日行程、交通費用、餐廳推薦、景點地圖與雙人旅費預算。" name="description"/>
 <meta content="website" property="og:type"/>
 <meta content="戀愛一週年旅行手帳｜東京・鎌倉・富士山 2026" property="og:title"/>
 <meta content="從桃園出發，收藏東京下町、湘南海岸、富士山滑雪與東京購物時光；附每日交通、餐廳與地圖。" property="og:description"/>
@@ -157,33 +157,52 @@
 
   .inline-official-link{display:inline-block;margin-top:5px;color:#526957;font-weight:800;text-decoration:underline;text-underline-offset:3px}
 
-  .budget-section{margin:22px 0 8px;padding:clamp(20px,3.5vw,32px);border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:var(--shadow)}
-  .budget-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:18px}
-  .budget-head h2{font-family:"Iowan Old Style","Noto Serif TC",serif;font-size:clamp(1.45rem,3vw,2rem);line-height:1.35;margin:0 0 7px}
-  .budget-head p{margin:0;color:var(--muted);font-size:.86rem;max-width:680px}
-  .budget-total{background:var(--sage-pale);border:1px solid #d7e1d2;border-radius:20px;padding:18px 20px;min-width:min(100%,260px);text-align:right}
-  .budget-total .label{display:block;color:#607461;font-size:.77rem;font-weight:800;letter-spacing:.08em}
-  .budget-total strong{display:block;color:#465d4b;font-size:clamp(1.45rem,3vw,2.1rem);line-height:1.25;margin:5px 0}
-  .budget-total small{display:block;color:#68756a;font-size:.75rem}
-  .budget-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0 24px}
-  .budget-kpi{border:1px solid var(--line);border-radius:15px;padding:13px 15px;background:#fffefa;min-width:0}
-  .budget-kpi span{display:block;color:var(--muted);font-size:.76rem;margin-bottom:4px}
-  .budget-kpi strong{font-size:1.12rem;color:var(--ink);line-height:1.4}
-  .budget-subheading{font-size:1rem;font-weight:850;margin:22px 0 9px;display:flex;align-items:center;gap:9px}
+  .budget-section{margin:28px 0 22px;padding:clamp(20px,3.5vw,34px);border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
+  .budget-header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:17px}
+  .budget-header h2{margin:0;font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.4}
+  .budget-kicker{margin:0 0 7px;color:var(--terracotta);font-size:.74rem;font-weight:850;letter-spacing:.15em}
+  .budget-caption{margin:8px 0 0;color:var(--muted);font-size:.88rem}
+  .budget-total-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 22px}
+  .budget-total-card{padding:18px 20px;border:1px solid #dce5d6;border-radius:18px;background:#edf2e9}
+  .budget-total-card.optional{border-color:#ead9cb;background:#fbf0e8}
+  .budget-total-label{font-size:.82rem;color:#586a59;font-weight:800}
+  .budget-total-card.optional .budget-total-label{color:#94654f}
+  .budget-total-number{margin:4px 0 2px;font-size:clamp(1.55rem,3.5vw,2.2rem);font-weight:900;line-height:1.25;letter-spacing:-.03em;color:#405b45;font-variant-numeric:tabular-nums}
+  .budget-total-card.optional .budget-total-number{color:#9d634b}
+  .budget-total-foot{font-size:.78rem;color:var(--muted)}
   .budget-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
-  .budget-table{width:100%;border-collapse:collapse;font-size:.86rem;min-width:420px;background:#fffefa}
-  .budget-table th,.budget-table td{padding:10px 13px;border-bottom:1px solid #eee8dd;text-align:left;vertical-align:top}
-  .budget-table th{background:#f2f0e7;color:#667365;font-size:.76rem;font-weight:850;white-space:nowrap}
-  .budget-table td:last-child,.budget-table th:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-  .budget-table tr:last-child td{border-bottom:0}
-  .budget-table .sum-row td{font-weight:900;background:#f6f4eb;color:#49594b}
-  .budget-table .range-row td:last-child{color:#526957;font-weight:800}
-  .budget-note{margin-top:12px;padding:12px 15px;border-radius:12px;background:#faf5e8;color:#786f5b;font-size:.8rem;line-height:1.75}
-  .budget-note strong{color:#685936}
-  .budget-footnote{color:var(--muted);font-size:.75rem;margin:10px 1px 0;line-height:1.7}
-  .budget-footnote a{color:#526957;text-underline-offset:3px}
-  @media(max-width:780px){.budget-head{display:block}.budget-total{text-align:left;margin-top:14px}.budget-kpis{grid-template-columns:1fr}.budget-kpi{display:flex;align-items:center;justify-content:space-between;gap:14px}.budget-kpi span{margin:0}.budget-kpi strong{text-align:right}}
-  @media print{.budget-section{box-shadow:none;background:#fff!important;border-color:#bbb!important;break-inside:auto}.budget-total,.budget-kpi,.budget-table th,.budget-table .sum-row td,.budget-note{background:#fff!important;border-color:#bbb!important;color:#222!important}.budget-table{font-size:8.5pt}}
+  .budget-table{width:100%;border-collapse:collapse;min-width:590px;font-size:.88rem;background:#fffdf8}
+  .budget-table th,.budget-table td{padding:11px 13px;text-align:left;border-bottom:1px solid #eee8dc;vertical-align:top}
+  .budget-table thead th{background:#f2eee4;color:#657066;font-size:.78rem;font-weight:850;white-space:nowrap}
+  .budget-table th:last-child,.budget-table td:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .budget-table tbody tr:last-child td{border-bottom:0}
+  .budget-table .subtotal td{background:#f2f5ef;font-weight:850;color:#405b45}
+  .budget-table .small-note{display:block;color:var(--muted);font-size:.77rem;line-height:1.55;margin-top:2px}
+  .budget-estimates{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+  .budget-estimate-card{border:1px solid var(--line);border-radius:15px;padding:15px;background:#fffaf1}
+  .budget-estimate-card h3{font-size:.96rem;margin:0 0 7px}
+  .budget-estimate-card p{font-size:.84rem;margin:0;color:#6f756b}
+  .budget-note{margin:14px 0 0;padding:13px 15px;border-radius:13px;background:#f8f3e7;color:#76684c;font-size:.82rem}
+  .budget-note strong{color:#65512d}
+  .budget-details{margin-top:13px;border:1px solid var(--line);border-radius:13px;background:#fffdf8;padding:12px 15px}
+  .budget-details summary{font-weight:850;color:var(--sage);cursor:pointer}
+  .budget-daily-table{width:100%;border-collapse:collapse;margin-top:9px;font-size:.84rem}
+  .budget-daily-table td{padding:6px 4px;border-bottom:1px dashed #e8e1d4}
+  .budget-daily-table td:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .budget-source-links a{color:var(--sage);font-weight:750;text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:650px){
+    .budget-total-grid,.budget-estimates{grid-template-columns:1fr}
+    .budget-header{display:block}
+    .budget-table{min-width:560px}
+    .budget-section{padding:18px}
+  }
+  @media print{
+    .budget-section{box-shadow:none;border-color:#bbb;padding:14px;break-inside:auto}
+    .budget-total-grid,.budget-estimates{grid-template-columns:1fr 1fr}
+    .budget-total-card,.budget-total-card.optional,.budget-estimate-card,.budget-note{background:#fff!important;border-color:#bbb!important;color:#333!important}
+    .budget-table th,.budget-table td{padding:6px 8px}
+    .budget-details{break-inside:avoid}
+  }
 
 </style>
 </head>
@@ -193,14 +212,14 @@
 <div class="wrap" id="top">
 <div class="topline">
 <div class="brand"><span aria-hidden="true" class="brand-mark">&hearts;</span><span>小日子旅行手帳</span></div>
-<div class="top-tag">TOKYO &middot; KAMAKURA &middot; FUJI</div>
+<div class="top-tag">TOKYO</div>
 </div>
 <header class="hero">
 <span aria-hidden="true" class="heart-note">♡</span>
 <div>
 <div class="eyebrow">OUR FIRST ANNIVERSARY</div>
 <h1>慶祝戀愛<span>滿一歲啦！</span></h1>
-<p class="hero-copy">把喜歡的日常，收進一趟小旅行裡。從東京下町的香氣、湘南海岸的電車，到富士山腳下的雪，再一起把購物、咖啡與回家的路，慢慢收進一週年的回憶。</p>
+<p class="hero-copy">把喜歡的日常，收進一趟小旅行裡，再一起把購物、咖啡與回家的路，慢慢收進一週年回憶。</p>
 <div class="hero-meta">
 <span class="pill">✦ 2026.11.14 &ndash; 11.20</span>
 <span class="pill peach">♡ 一週年紀念旅行</span>
@@ -242,69 +261,74 @@
 <a class="map-link" href="https://maps.app.goo.gl/ypz6ZM2K9GZfupe3A" rel="noopener noreferrer" target="_blank">在地圖中開啟 &nearrow;</a>
 </section>
 
-<section aria-labelledby="budget-title" class="budget-section" id="trip-budget">
-  <div class="budget-head">
+<section aria-labelledby="budget-title" class="budget-section" id="budget">
+  <div class="budget-header">
     <div>
-      <div class="info-title"><span aria-hidden="true">♡</span> TRIP BUDGET / 旅費預算</div>
-      <h2 id="budget-title">把回憶收好，也把預算安排好</h2>
-      <p>依目前提供的固定費用，加上兩位旅人的餐飲與滑雪裝備估算。購物、伴手禮與臨時增加的行程尚未計入。</p>
+      <p class="budget-kicker">TRIP BUDGET / 旅費小帳本</p>
+      <h2 id="budget-title">這趟旅行，大概要準備多少？</h2>
+      <p class="budget-caption">以兩人同行估算；已提供的機票、住宿等費用依原金額列入，餐飲採每日固定預算，另計面罩、護目鏡與手套三項配件。</p>
     </div>
-    <div class="budget-total" aria-label="兩位旅人預估總旅費">
-      <span class="label">兩位旅人・預估總旅費</span>
-      <strong>NT$58,900–63,600</strong>
-      <small>包含下方餐飲與滑雪裝備預估</small>
+    <div aria-hidden="true" style="font-size:2.5rem;line-height:1">♡</div>
+  </div>
+  <div class="budget-total-grid">
+    <div class="budget-total-card">
+      <div class="budget-total-label">基本旅費估算｜兩人合計</div>
+      <div class="budget-total-number">NT$58,714</div>
+      <div class="budget-total-foot">約 NT$29,357／人；含已知費用、交通預算與五天餐飲，不含 Outlet／伴手禮購物及其他未列支出。</div>
+    </div>
+    <div class="budget-total-card optional">
+      <div class="budget-total-label">加上滑雪配件｜兩人合計</div>
+      <div class="budget-total-number">約 NT$60,544</div>
+      <div class="budget-total-foot">約 NT$30,272／人；已假設兩人自備雪具與雪衣，只額外購買面罩、護目鏡與手套。</div>
     </div>
   </div>
-  <div class="budget-kpis">
-    <div class="budget-kpi"><span>已提供費用合計</span><strong>NT$48,959</strong></div>
-    <div class="budget-kpi"><span>餐飲／咖啡甜點（每人）</span><strong>NT$4,000–5,700</strong></div>
-    <div class="budget-kpi"><span>滑雪裝備額外費（每人）</span><strong>NT$950–1,600</strong></div>
-  </div>
-
-  <h3 class="budget-subheading"><span aria-hidden="true">✦</span> 已提供的固定費用</h3>
-  <div class="budget-table-wrap">
+  <div class="budget-table-wrap" role="region" aria-label="雙人旅遊預算明細" tabindex="0">
     <table class="budget-table">
-      <thead><tr><th scope="col">項目</th><th scope="col">金額（NT$）</th></tr></thead>
+      <thead><tr><th scope="col">費用項目</th><th scope="col">算法／備註</th><th scope="col">預估金額（NT$）</th></tr></thead>
       <tbody>
-        <tr><td>機票（Peach）</td><td>22,060</td></tr>
-        <tr><td>飯店（上野東金屋ホテル）</td><td>13,406</td></tr>
-        <tr><td>eSIM 1</td><td>392</td></tr>
-        <tr><td>eSIM 2</td><td>399</td></tr>
-        <tr><td>旅遊保險</td><td>578</td></tr>
-        <tr><td>日本 Skyliner</td><td>1,684</td></tr>
-        <tr><td>富士山滑雪一日遊</td><td>8,066</td></tr>
-        <tr><td>高德院門票</td><td>150</td></tr>
-        <tr><td>台灣交通（國光 1841，NT$112 × 來回 2 趟）</td><td>224</td></tr>
-        <tr><td>日本交通預算</td><td>2,000</td></tr>
-        <tr class="sum-row"><td>已提供費用合計</td><td>48,959</td></tr>
+        <tr><td>機票｜Peach 往返</td><td>兩人合計</td><td>22,060</td></tr>
+        <tr><td>住宿｜上野東金屋ホテル</td><td>兩人合計</td><td>13,406</td></tr>
+        <tr><td>eSIM</td><td>兩人合計</td><td>800</td></tr>
+        <tr><td>旅遊保險</td><td>兩人合計</td><td>600</td></tr>
+        <tr><td>Skyliner</td><td>兩人合計</td><td>1,684</td></tr>
+        <tr><td>滑雪一日遊</td><td>兩人合計</td><td>8,066</td></tr>
+        <tr><td>高德院門票</td><td>兩人合計</td><td>150</td></tr>
+        <tr class="subtotal"><td colspan="2">已提供的固定費用小計</td><td>46,766</td></tr>
+        <tr><td>台灣交通｜國光客運 1841</td><td>NT$112 × 兩人 × 去回各一程</td><td>448</td></tr>
+        <tr><td>日本交通預算</td><td>採你提供的 NT$2,000／人，兩人留有轉乘緩衝</td><td>4,000</td></tr>
+        <tr><td>餐飲、咖啡與日常零食</td><td>兩人每日 NT$1,500 × 5 天（11/15–11/19）</td><td>7,500</td></tr>
+        <tr class="subtotal"><td colspan="2">基本旅費估算｜兩人合計</td><td>58,714</td></tr>
+        <tr><td>滑雪配件｜面罩、護目鏡、手套</td><td>兩人合計：面罩 ¥2,500 × 2、護目鏡 ¥1,000 × 2、手套 ¥1,000 × 2；合計 ¥9,000，約 NT$1,830</td><td>約 1,830</td></tr>
+        <tr class="subtotal"><td colspan="2">含滑雪配件｜兩人合計</td><td>約 60,544</td></tr>
       </tbody>
     </table>
   </div>
-
-  <h3 class="budget-subheading"><span aria-hidden="true">☕</span> 餐飲與咖啡甜點估算（每人）</h3>
-  <div class="budget-table-wrap">
-    <table class="budget-table">
-      <thead><tr><th scope="col">日期</th><th scope="col">日圓預算</th><th scope="col">約合台幣</th></tr></thead>
+  <details class="budget-details">
+    <summary>查看餐飲估算與日圓換算方式</summary>
+    <p class="budget-caption">以下全部以兩人合計估算，不直接加總各餐廳菜單價格。正餐每餐約 ¥3,000（約 NT$600），每天兩餐；點心、咖啡與零食每天約 ¥1,500（約 NT$300）。</p>
+    <table class="budget-daily-table" aria-label="每日兩人餐飲預算估算">
       <tbody>
-        <tr><td>11/15（日）下町散策</td><td>¥5,000–6,800</td><td>NT$1,050–1,430</td></tr>
-        <tr><td>11/16（一）鎌倉・橫濱</td><td>¥4,600–5,500</td><td>NT$970–1,160</td></tr>
-        <tr><td>11/17（二）富士山滑雪・新宿</td><td>¥3,500–5,000</td><td>NT$735–1,050</td></tr>
-        <tr><td>11/18（三）木更津・東京車站</td><td>¥3,000–4,500</td><td>NT$630–945</td></tr>
-        <tr><td>11/19（四）神樂坂・返程</td><td>¥2,600–4,000</td><td>NT$550–840</td></tr>
-        <tr><td>11/20（五）機場簡單補給</td><td>¥0–1,000</td><td>NT$0–210</td></tr>
-        <tr class="sum-row"><td>合計（每人）</td><td>¥18,700–26,800</td><td>約 NT$4,000–5,700</td></tr>
+        <tr><td>每日正餐（2 餐）</td><td>約 ¥6,000／NT$1,200</td></tr>
+        <tr><td>每日點心、咖啡與零食（約 1 次）</td><td>約 ¥1,500／NT$300</td></tr>
+        <tr><td><strong>每日合計（兩人）</strong></td><td><strong>約 ¥7,500／NT$1,500</strong></td></tr>
+        <tr><td>11/15（日）下町散策日</td><td>約 NT$1,500（兩人）</td></tr>
+        <tr><td>11/16（一）鎌倉・橫濱</td><td>約 NT$1,500（兩人）</td></tr>
+        <tr><td>11/17（二）富士山滑雪・新宿</td><td>約 NT$1,500（兩人）</td></tr>
+        <tr><td>11/18（三）木更津・東京車站</td><td>約 NT$1,500（兩人）</td></tr>
+        <tr><td>11/19（四）神樂坂・返程</td><td>約 NT$1,500（兩人）</td></tr>
+        <tr><td><strong>五天合計</strong></td><td><strong>約 NT$7,500／¥37,500（兩人）</strong></td></tr>
       </tbody>
     </table>
-  </div>
-
-  <div class="budget-note"><strong>滑雪裝備額外預算（每人）：約 NT$950–1,600。</strong> 以面罩 ¥2,500、雙板滑雪襪 ¥2,000，另加 0–3 件護目鏡／手套／玩雪槍租借（每件約 ¥1,000）估算。若以上用品已包含在滑雪一日遊方案內，請勿重複計算。</div>
-  <div class="budget-note"><strong>總額估算方式：</strong>已提供固定費用依你列出的金額直接加總為 NT$48,959；餐飲與滑雪裝備按每人估算後乘以兩位旅人，因此目前推估約 NT$58,900–63,600。此算法暫時將固定費用清單視為整趟旅程的已付／預算金額；若機票、飯店或滑雪團的金額其實是「每人」價格，總額會需要再調整。Outlet、Alpen TOKYO 購物、伴手禮與額外購物金不包含在內。</div>
-  <p class="budget-footnote">匯率估算採較保守的 <strong>¥1 ≈ NT$0.21</strong>，方便預留刷卡／換匯差額；2026/10/13 市場報價約 ¥1 ≈ NT$0.203，實際依換匯或刷卡日匯率為準。參考：<a href="https://www.investing.com/currencies/jpy-twd-historical-data" target="_blank" rel="noopener noreferrer">JPY/TWD 匯率資料 ↗</a>。此區金額均為預算估算，非店家報價保證。</p>
+    <p class="budget-caption">日圓與台幣採方便抓預算的近似值（正餐 ¥3,000 約 NT$600、點心咖啡零食 ¥1,500 約 NT$300），實際換匯與刷卡金額會因匯率和手續費不同。日本交通逐段票價約 ¥8,096／人，兩人約 NT$3,300；因此以你提供的 NT$2,000／人作預算較有緩衝。</p>
+  </details>
+  <div class="budget-note"><strong>滑雪配件費用提醒：</strong>你們已有雪具與雪衣，因此額外只估算兩人面罩 ¥2,500 × 2、護目鏡 ¥1,000 × 2、手套 ¥1,000 × 2，合計 ¥9,000，約 NT$1,830。實際價格依現場販售為準；本預算不再另計滑具組、雪衣、滑雪襪或雪橇。</div>
+  <div class="budget-note"><strong>預算未包含：</strong>Outlet 品牌購物、伴手禮大量採買、未列出的行李加購、酒精飲品及臨時新增景點費用。建議再留一筆個人購物與突發支出。</div>
+  <p class="budget-caption budget-source-links">參考資料：<a href="https://www.yeti-resort.com/tw/rental/" target="_blank" rel="noopener noreferrer">YETI 官方租借價格</a> ／ <a href="https://www.investing.com/currencies/jpy-twd-historical-data" target="_blank" rel="noopener noreferrer">JPY/TWD 參考匯率</a>。餐廳菜單與交通票價仍請以出發時公告為準。</p>
 </section>
 
-<p class="subtle-note">行程依提供的時間與費用整理；實際班次、票價與營業時間，請以官方公告／票券為準。抵達上野後先劃位回程 Skyliner；11/19 請預留取行李與前往成田的時間。</p>
+<p class="subtle-note">行程依提供的時間與費用整理；餐飲與交通為預估值，實際班次、票價、營業時間與航班報到規定，請以官方公告／票券為準。抵達上野後先劃位回程 Skyliner；11/19 請預留取行李與前往成田的時間。</p>
 <div class="day-nav-wrap">
-<nav aria-label="快速跳至每日行程" class="day-nav wrap"><a href="#day0"><span class="nav-num">前</span>11/14 出發夜</a><a href="#day1"><span class="nav-num">01</span>11/15 下町散策</a><a href="#day2"><span class="nav-num">02</span>11/16 鎌倉・橫濱</a><a href="#day3"><span class="nav-num">03</span>11/17 富士山滑雪</a><a href="#day4"><span class="nav-num">04</span>11/18 木更津購物</a><a href="#day5"><span class="nav-num">05</span>11/19 神樂坂・返程</a><a href="#day6"><span class="nav-num">回</span>11/20 平安抵達</a></nav>
+<nav aria-label="快速跳至每日行程" class="day-nav wrap"><a href="#day0"><span class="nav-num">前</span>11/14 出發夜</a><a href="#day1"><span class="nav-num">01</span>11/15 下町散策</a><a href="#day2"><span class="nav-num">02</span>11/16 鎌倉・橫濱</a><a href="#day3"><span class="nav-num">03</span>11/17 富士山滑雪</a><a href="#day4"><span class="nav-num">04</span>11/18 木更津購物</a><a href="#day5"><span class="nav-num">05</span>11/19 神樂坂・返程</a><a href="#day6"><span class="nav-num">回</span>11/20 平安抵達</a><a href="#budget"><span class="nav-num">¥</span>整體預算</a></nav>
 <p class="nav-hint"><span aria-hidden="true">&harr;</span> 手機上可左右滑動日期，快速跳至想去的地方</p>
 </div>
 <main id="main-content" tabindex="-1">
@@ -317,7 +341,7 @@
 <circle cx="61" cy="125" fill="#5a6058" r="12"></circle><circle cx="147" cy="125" fill="#5a6058" r="12"></circle><circle cx="61" cy="125" fill="#eee9dc" r="5"></circle><circle cx="147" cy="125" fill="#eee9dc" r="5"></circle>
 <rect fill="#f5e6dc" height="39" rx="4" stroke="#bd8b70" stroke-width="2" width="21" x="184" y="91"></rect><path d="M190 91v-7a5 5 0 0 1 10 0v7" fill="none" stroke="#bd8b70" stroke-width="2"></path>
 <path d="M111 19c-7-7-17 4-8 12l8 7 8-7c9-8-1-19-8-12z" fill="#d48668"></path>
-</svg><p class="art-caption">帶著期待出發</p></aside>
+</svg><p class="art-caption"></p></aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day0-title">出發前夜・松山前往桃園</h2><div class="day-date">11 / 14 SAT &middot; PRE-TRIP</div></div>
 <p class="day-intro">正式旅行從前一晚開始。把護照、機票、行李與交通票券準備好，帶著輕鬆的心情前往機場。</p>
@@ -340,13 +364,12 @@
 <path d="M87 154q20-7 40 0" fill="none" stroke="#d5b9a6" stroke-width="2"></path>
 <path d="M47 158q8-13 16-1m97 0q8-13 16-1" fill="none" stroke="#829681" stroke-linecap="round" stroke-width="2"></path>
 </svg>
-<p class="art-caption">咖啡香與下町散步</p>
 </aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day1-title">東京下町散策・咖啡與老舖甜點</h2><div class="day-date">11 / 15 SUN &middot; DAY 01</div></div>
 <p class="day-intro">從清晨抵達東京開始，先放行李、吃點東西，再慢慢走訪清澄白河、人形町與戶越銀座。前一晚搭紅眼班機，請讓體力決定下午的節奏。</p>
-<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">02:25</div><h3>桃園 T1｜Peach MM620 起飛</h3></div><a aria-label="在 Google 地圖開啟：桃園 T1｜Peach MM620 起飛" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘 Peach MM620 前往東京成田機場第一航廈。</p><div class="stop-tags"><span class="mini-tag">航班 MM620</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">06:30</div><h3>抵達成田 T1｜入境與提領行李</h3></div><a aria-label="在 Google 地圖開啟：抵達成田 T1｜入境與提領行李" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%90%E7%94%B0%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>預留約 2 小時辦理入境、提領行李與前往車站。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">09:00</div><h3>搭乘 Skyliner 前往上野</h3></div><a aria-label="在 Google 地圖開啟：搭乘 Skyliner 前往上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E7%AB%99" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>抵達上野車站後，記得先為 11/19 回程前往成田的 Skyliner 劃位，並確認班次與乘車站。</p><div class="stop-tags"><span class="mini-tag">重要提醒｜先劃回程 Skyliner</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:00</div><h3>上野東金屋ホテル｜寄放行李</h3></div><a aria-label="在 Google 地圖開啟：上野東金屋ホテル｜寄放行李" class="stop-map" href="https://maps.app.goo.gl/ypz6ZM2K9GZfupe3A" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>先寄放行李，輕裝開始散步；依飯店規定確認可寄放時間。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:30</div><h3>早餐｜らーめん鴨 to 葱</h3></div><a aria-label="在 Google 地圖開啟：早餐｜らーめん鴨 to 葱" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%89%E3%83%BC%E3%82%81%E3%82%93%E9%B4%A8to%E8%91%B1%20%E4%B8%8A%E9%87%8E" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>推薦鴨肉拉麵；提供資訊為 24 小時營業，平均約 &yen;1,500。抵達後仍請確認店家公告與排隊狀況。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:00</div><h3>上野御徒町 &rarr; 清澄白河</h3></div><a aria-label="在 Google 地圖開啟：上野御徒町 &rarr; 清澄白河" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B8%85%E6%BE%84%E7%99%BD%E6%B2%B3%E7%AB%99" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車前往清澄白河，單程約 &yen;220。可隨意挑一家咖啡廳外帶咖啡，再到清澄公園散步。</p><div class="stop-tags"><span class="mini-tag">電車 &yen;220</span><span class="mini-tag">咖啡散步</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:30</div><h3>午餐｜深川釜匠</h3></div><a aria-label="在 Google 地圖開啟：午餐｜深川釜匠" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B7%B1%E5%B7%9D%E9%87%9C%E5%8C%A0%20%E6%9D%B1%E4%BA%AC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>品嚐傳統深川釜飯，提供資訊的參考價為 &yen;1,490／&yen;1,690。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">12:30</div><h3>散步至人形町｜森乃園、壽堂</h3></div><a aria-label="在 Google 地圖開啟：散步至人形町｜森乃園、壽堂" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A3%AE%E4%B9%83%E5%9C%92%20%E4%BA%BA%E5%BD%A2%E7%94%BA" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>森乃園選購香氣溫暖的焙茶；壽堂選購招牌黃金芋。兩間老舖可依當天營業情況調整順序。</p><div class="stop-tags"><span class="mini-tag">焙茶</span><span class="mini-tag">黃金芋</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">14:00</div><h3>體力補給｜回飯店休息或繼續走</h3></div><a aria-label="在 Google 地圖開啟：體力補給｜回飯店休息或繼續走" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E6%9D%B1%E9%87%91%E5%B1%8B%E3%83%9B%E3%83%86%E3%83%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>如果前一晚睡眠不足，可以先回飯店休息；若精神還不錯，再前往戶越銀座。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性｜依體力決定</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">15:00</div><h3>人形町 &rarr; 戶越｜戶越銀座商店街</h3></div><a aria-label="在 Google 地圖開啟：人形町 &rarr; 戶越｜戶越銀座商店街" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%B8%E8%B6%8A%E9%8A%80%E5%BA%A7%E5%95%86%E5%BA%97%E8%A1%97" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭電車前往戶越，單程約 &yen;272。逛逛在地長型商店街，沿路尋找飯糰、米糰子與米麵包。</p><div class="stop-tags"><span class="mini-tag">電車 &yen;272</span><span class="mini-tag">在地小吃</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">18:00</div><h3>戶越 &rarr; 人形町 &rarr; 上野</h3></div><a aria-label="在 Google 地圖開啟：戶越 &rarr; 人形町 &rarr; 上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E6%9D%B1%E9%87%91%E5%B1%8B%E3%83%9B%E3%83%86%E3%83%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>依規劃路線返回上野，交通費合計約 &yen;328。回飯店休息，再視體力決定是否外出吃晚餐。</p><div class="stop-tags"><span class="mini-tag">電車約 &yen;328</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">晚餐彈性</div><h3>天丼天ぷら まことや</h3></div><a aria-label="在 Google 地圖開啟：天丼天ぷら まことや" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A9%E4%B8%BC%E5%A4%A9%E3%81%B7%E3%82%89%20%E3%81%BE%E3%81%93%E3%81%A8%E3%82%84%20%E6%9D%B1%E4%BA%AC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>若還有體力，可考慮天丼或天婦羅，提供資訊的平均價位約 &yen;1,100&ndash;&yen;1,800。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性｜可外帶或休息</span></div></article></div>
-<div class="callout">♡ 今天步行與交通較多；如果很累，14:00 回飯店休息完全合理。回程 Skyliner 劃位務必先完成。</div>
+<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">02:25</div><h3>桃園 T1｜Peach MM620 起飛</h3></div><a aria-label="在 Google 地圖開啟：桃園 T1｜Peach MM620 起飛" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘 Peach MM620 前往東京成田機場第一航廈。</p><div class="stop-tags"><span class="mini-tag">航班 MM620</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">06:30</div><h3>抵達成田 T1｜入境與提領行李</h3></div><a aria-label="在 Google 地圖開啟：抵達成田 T1｜入境與提領行李" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%90%E7%94%B0%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>預留約 2 小時辦理入境、提領行李與前往車站。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">09:00</div><h3>搭乘 Skyliner 前往上野</h3></div><a aria-label="在 Google 地圖開啟：搭乘 Skyliner 前往上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E7%AB%99" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>抵達上野車站後，記得先為 11/19 回程前往成田的 Skyliner 劃位，並確認班次與乘車站。</p><div class="stop-tags"><span class="mini-tag">重要提醒｜先劃回程 Skyliner</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:00</div><h3>上野東金屋ホテル｜寄放行李</h3></div><a aria-label="在 Google 地圖開啟：上野東金屋ホテル｜寄放行李" class="stop-map" href="https://maps.app.goo.gl/ypz6ZM2K9GZfupe3A" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>先寄放行李，輕裝開始散步；依飯店規定確認可寄放時間。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:30</div><h3>早餐｜らーめん鴨 to 葱</h3></div><a aria-label="在 Google 地圖開啟：早餐｜らーめん鴨 to 葱" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%89%E3%83%BC%E3%82%81%E3%82%93%E9%B4%A8to%E8%91%B1%20%E4%B8%8A%E9%87%8E" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>推薦鴨肉拉麵；提供資訊為 24 小時營業，平均約 &yen;1,500。抵達後仍請確認店家公告與排隊狀況。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:00</div><h3>上野御徒町 &rarr; 清澄白河</h3></div><a aria-label="在 Google 地圖開啟：上野御徒町 &rarr; 清澄白河" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B8%85%E6%BE%84%E7%99%BD%E6%B2%B3%E7%AB%99" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車前往清澄白河，單程約 &yen;220。可隨意挑一家咖啡廳外帶咖啡，再到清澄公園散步。</p><div class="stop-tags"><span class="mini-tag">電車 &yen;220</span><span class="mini-tag">咖啡散步</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:30</div><h3>午餐｜深川釜匠</h3></div><a aria-label="在 Google 地圖開啟：午餐｜深川釜匠" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B7%B1%E5%B7%9D%E9%87%9C%E5%8C%A0%20%E6%9D%B1%E4%BA%AC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>品嚐傳統深川釜飯，提供的兩種參考價 &yen;1,490／&yen;1,690，平均約 &yen;1,590／人。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">12:30</div><h3>散步至人形町｜森乃園、壽堂</h3></div><a aria-label="在 Google 地圖開啟：散步至人形町｜森乃園、壽堂" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A3%AE%E4%B9%83%E5%9C%92%20%E4%BA%BA%E5%BD%A2%E7%94%BA" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>森乃園選購香氣溫暖的焙茶；壽堂選購招牌黃金芋。兩間老舖可依當天營業情況調整順序。</p><div class="stop-tags"><span class="mini-tag">焙茶</span><span class="mini-tag">黃金芋</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">14:00</div><h3>體力補給｜回飯店休息或繼續走</h3></div><a aria-label="在 Google 地圖開啟：體力補給｜回飯店休息或繼續走" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E6%9D%B1%E9%87%91%E5%B1%8B%E3%83%9B%E3%83%86%E3%83%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>如果前一晚睡眠不足，可以先回飯店休息；若精神還不錯，再前往戶越銀座。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性｜依體力決定</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">15:00</div><h3>人形町 &rarr; 戶越｜戶越銀座商店街</h3></div><a aria-label="在 Google 地圖開啟：人形町 &rarr; 戶越｜戶越銀座商店街" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%B8%E8%B6%8A%E9%8A%80%E5%BA%A7%E5%95%86%E5%BA%97%E8%A1%97" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭電車前往戶越，單程約 &yen;272。逛逛在地長型商店街，沿路尋找飯糰、米糰子與米麵包。</p><div class="stop-tags"><span class="mini-tag">電車 &yen;272</span><span class="mini-tag">在地小吃</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">18:00</div><h3>戶越 &rarr; 人形町 &rarr; 上野</h3></div><a aria-label="在 Google 地圖開啟：戶越 &rarr; 人形町 &rarr; 上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E6%9D%B1%E9%87%91%E5%B1%8B%E3%83%9B%E3%83%86%E3%83%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>依規劃路線返回上野，交通費合計約 &yen;328。回飯店休息，再視體力決定是否外出吃晚餐。</p><div class="stop-tags"><span class="mini-tag">電車約 &yen;328</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">晚餐彈性</div><h3>天丼天ぷら まことや</h3></div><a aria-label="在 Google 地圖開啟：天丼天ぷら まことや" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A9%E4%B8%BC%E5%A4%A9%E3%81%B7%E3%82%89%20%E3%81%BE%E3%81%93%E3%81%A8%E3%82%84%20%E6%9D%B1%E4%BA%AC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>若還有體力，可考慮天丼或天婦羅，提供資訊的平均價位約 &yen;1,100&ndash;&yen;1,800。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性｜可外帶或休息</span></div></article></div>
+<div class="callout">♡ 今天步行與交通較多；如果很累，14:00 回飯店休息。回程 Skyliner 劃位務必先完成。</div>
 </div>
 </section>
 <section aria-labelledby="day2-title" class="day-card" id="day2">
@@ -371,12 +394,12 @@
 <path d="M105 42l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#d48668"></path>
 <path d="M105 174q22-13 43 0" fill="none" stroke="#8da5a7" stroke-linecap="round" stroke-width="2"></path>
 </svg>
-<p class="art-caption">湘南海風與復古電車</p>
+<p class="art-caption"></p>
 </aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day2-title">鎌倉大佛・灌籃高手平交道・橫濱</h2><div class="day-date">11 / 16 MON &middot; DAY 02</div></div>
 <p class="day-intro">從鎌倉古都一路走向湘南海岸，再轉往港灣城市橫濱。交通路線較長，請以當日列車與公車時刻為準，必要時可縮短橫濱停留範圍。</p>
-<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:00</div><h3>JR 上野 &rarr; JR 藤澤</h3></div><a aria-label="在 Google 地圖開啟：JR 上野 &rarr; JR 藤澤" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=JR%E4%B8%8A%E9%87%8E%E7%AB%99" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車前往藤澤，提供的單程參考費用約 &yen;1,034。出發前確認轉乘路線與月台。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:00</div><h3>藤澤站南口 &rarr; 大佛前｜搭乘公車</h3></div><a aria-label="在 Google 地圖開啟：藤澤站南口 &rarr; 大佛前｜搭乘公車" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%97%A4%E6%B2%A2%E9%A7%85%E5%8D%97%E5%8F%A3%20%E3%83%90%E3%82%B9%E4%B9%97%E3%82%8A%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭公車前往大佛前，提供的參考費用約 &yen;360。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">抵達後</div><h3>鎌倉大佛｜高德院</h3></div><a aria-label="在 Google 地圖開啟：鎌倉大佛｜高德院" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%AB%98%E5%BE%B3%E9%99%A2%20%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BB%8F" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>參觀代表性的青銅阿彌陀如來坐像，門票參考價 &yen;300。請確認當日開放時間。</p><div class="stop-tags"><span class="mini-tag">門票約 &yen;300</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">13:00</div><h3>長谷 &rarr; 鎌倉高校前</h3></div><a aria-label="在 Google 地圖開啟：長谷 &rarr; 鎌倉高校前" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘江之電前往鎌倉高校前，提供的單程參考費用約 &yen;220。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">13:00 後</div><h3>灌籃高手平交道｜湘南海岸</h3></div><a aria-label="在 Google 地圖開啟：灌籃高手平交道｜湘南海岸" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85%20%E8%B8%8F%E5%88%87" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>在鎌倉高校前站附近欣賞經典海岸與平交道景色。請留意列車、道路與其他行人安全，不要站在軌道或車道上拍照。</p><div class="stop-tags"><span class="mini-tag">拍照請注意安全</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">13:30</div><h3>鎌倉高校前 &rarr; 江之島</h3></div><a aria-label="在 Google 地圖開啟：鎌倉高校前 &rarr; 江之島" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B1%9F%E3%83%8E%E5%B3%B6%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘江之電前往江之島一帶，提供的單程參考費用約 &yen;200。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">接續轉乘</div><h3>湘南江之島 &rarr; 大船 &rarr; 橫濱</h3></div><a aria-label="在 Google 地圖開啟：湘南江之島 &rarr; 大船 &rarr; 橫濱" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B9%98%E5%8D%97%E6%B1%9F%E3%81%AE%E5%B3%B6%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>依序搭乘湘南單軌電車至大船（約 &yen;340），再前往橫濱（約 &yen;350）。請預留找站、轉乘與等車時間。</p><div class="stop-tags"><span class="mini-tag">湘南單軌約 &yen;340</span><span class="mini-tag">大船 &rarr; 橫濱約 &yen;350</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">14:30</div><h3>橫濱午餐｜選一家喜歡的餐廳</h3></div><a aria-label="在 Google 地圖開啟：橫濱午餐｜選一家喜歡的餐廳" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A8%AA%E6%B5%9C%E9%A7%85%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>花より、ハンバーグ（漢堡，約 &yen;2,000 內）、こめらく（茶泡飯，約 &yen;1,500），或横浜焼肉kintan（燒肉午餐約 &yen;1,500&ndash;&yen;3,000；晚餐預算較高，依菜單選擇）。</p><div class="stop-tags"><span class="mini-tag">餐廳依現場候位調整</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">下午至傍晚</div><h3>橫濱周圍閑晃</h3></div><a aria-label="在 Google 地圖開啟：橫濱周圍閑晃" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A8%AA%E6%B5%9C%E8%B5%A4%E3%83%AC%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>可在港未來、紅磚倉庫或海濱周邊散步購物，依午餐與抵達時間決定停留區域。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">19:00</div><h3>橫濱 &rarr; 上野</h3></div><a aria-label="在 Google 地圖開啟：橫濱 &rarr; 上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=JR%E6%A8%AA%E6%B5%9C%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車返回上野，提供的單程參考費用約 &yen;620。</p></article></div>
+<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:00</div><h3>JR 上野 &rarr; JR 藤澤</h3></div><a aria-label="在 Google 地圖開啟：JR 上野 &rarr; JR 藤澤" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=JR%E4%B8%8A%E9%87%8E%E7%AB%99" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車前往藤澤，提供的單程參考費用約 &yen;1,034。出發前確認轉乘路線與月台。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:00</div><h3>藤澤站南口 &rarr; 大佛前｜搭乘公車</h3></div><a aria-label="在 Google 地圖開啟：藤澤站南口 &rarr; 大佛前｜搭乘公車" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%97%A4%E6%B2%A2%E9%A7%85%E5%8D%97%E5%8F%A3%20%E3%83%90%E3%82%B9%E4%B9%97%E3%82%8A%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭公車前往大佛前，提供的參考費用約 &yen;360。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">抵達後</div><h3>鎌倉大佛｜高德院</h3></div><a aria-label="在 Google 地圖開啟：鎌倉大佛｜高德院" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%AB%98%E5%BE%B3%E9%99%A2%20%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BB%8F" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>參觀代表性的青銅阿彌陀如來坐像，門票參考價 &yen;300。請確認當日開放時間。</p><div class="stop-tags"><span class="mini-tag">門票約 &yen;300</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">13:00</div><h3>長谷 &rarr; 鎌倉高校前</h3></div><a aria-label="在 Google 地圖開啟：長谷 &rarr; 鎌倉高校前" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘江之電前往鎌倉高校前，提供的單程參考費用約 &yen;220。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">13:00 後</div><h3>灌籃高手平交道｜湘南海岸</h3></div><a aria-label="在 Google 地圖開啟：灌籃高手平交道｜湘南海岸" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85%20%E8%B8%8F%E5%88%87" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>在鎌倉高校前站附近欣賞經典海岸與平交道景色。請留意列車、道路與其他行人安全，不要站在軌道或車道上拍照。</p><div class="stop-tags"><span class="mini-tag">拍照請注意安全</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">13:30</div><h3>鎌倉高校前 &rarr; 江之島</h3></div><a aria-label="在 Google 地圖開啟：鎌倉高校前 &rarr; 江之島" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B1%9F%E3%83%8E%E5%B3%B6%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘江之電前往江之島一帶，提供的單程參考費用約 &yen;200。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">接續轉乘</div><h3>湘南江之島 &rarr; 大船 &rarr; 橫濱</h3></div><a aria-label="在 Google 地圖開啟：湘南江之島 &rarr; 大船 &rarr; 橫濱" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B9%98%E5%8D%97%E6%B1%9F%E3%81%AE%E5%B3%B6%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>依序搭乘湘南單軌電車至大船（約 &yen;340），再前往橫濱（約 &yen;350）。請預留找站、轉乘與等車時間。</p><div class="stop-tags"><span class="mini-tag">湘南單軌約 &yen;340</span><span class="mini-tag">大船 &rarr; 橫濱約 &yen;350</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">14:30</div><h3>橫濱午餐｜選一家喜歡的餐廳</h3></div><a aria-label="在 Google 地圖開啟：橫濱午餐｜選一家喜歡的餐廳" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A8%AA%E6%B5%9C%E9%A7%85%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>花より、ハンバーグ（漢堡，約 &yen;1,300–&yen;1,850）、こめらく（茶泡飯，約 &yen;1,500–&yen;1,750），或横浜焼肉kintan（一般午餐組合約 &yen;1,500–&yen;2,700，預算可抓約 &yen;2,000／人；高價套餐另計）。</p><div class="stop-tags"><span class="mini-tag">餐廳依現場候位調整</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">下午至傍晚</div><h3>橫濱周圍閑晃</h3></div><a aria-label="在 Google 地圖開啟：橫濱周圍閑晃" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A8%AA%E6%B5%9C%E8%B5%A4%E3%83%AC%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>可在港未來、紅磚倉庫或海濱周邊散步購物，依午餐與抵達時間決定停留區域。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">19:00</div><h3>橫濱 &rarr; 上野</h3></div><a aria-label="在 Google 地圖開啟：橫濱 &rarr; 上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=JR%E6%A8%AA%E6%B5%9C%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車返回上野，提供的單程參考費用約 &yen;620。</p></article></div>
 <div class="callout">♡ 這天轉乘較密集，出發前先確認江之電、湘南單軌與巴士時間；各段車資是提供的估算值，請以現場票價為準。</div>
 </div>
 </section>
@@ -398,13 +421,13 @@
 <path d="M39 48l2 6 6 2-6 2-2 6-2-6-6-2 6-2zM192 83l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#fffdf7" stroke="#9db2b6" stroke-width="1"></path>
 <circle cx="42" cy="111" fill="#fffdf7" r="3"></circle><circle cx="185" cy="128" fill="#fffdf7" r="4"></circle><circle cx="110" cy="27" fill="#fffdf7" r="3"></circle>
 </svg>
-<p class="art-caption">雪白富士山小冒險</p>
+<p class="art-caption"></p>
 </aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day3-title">富士山 YETI 滑雪・新宿採購</h2><div class="day-date">11 / 17 TUE &middot; DAY 03</div></div>
-<p class="day-intro">今天早出晚歸，先以滑雪團行程為主，再安排晚餐與 Alpen TOKYO。衣物、手套與保暖配件先整理好，減少現場臨時採買的壓力。</p>
-<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">06:30</div><h3>上野御徒町 &rarr; 新宿西口</h3></div><a aria-label="在 Google 地圖開啟：上野御徒町 &rarr; 新宿西口" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E5%BE%A1%E5%BE%92%E7%94%BA%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車前往新宿西口，提供的單程參考費用約 &yen;220。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">07:20</div><h3>新宿 L 塔集合</h3></div><a aria-label="在 Google 地圖開啟：新宿 L 塔集合" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%93%E3%83%AB%20%E6%96%B0%E5%AE%BFL%E3%82%BF%E3%83%AF%E3%83%BC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>依滑雪行程安排集合，請再次確認集合樓層、報到方式及遊覽車出發時間。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:30&ndash;18:00</div><h3>富士山 YETI 滑雪場</h3></div><a aria-label="在 Google 地圖開啟：富士山 YETI 滑雪場" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%20%E3%82%A4%E3%82%A8%E3%83%86%E3%82%A3" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>體驗滑雪或雪地活動。可自備長襪與長袖；提供的裝備價格：面罩 &yen;2,500、雙板滑雪襪 &yen;2,000；護目鏡、手套、玩雪槍租借每件約 &yen;1,000。請確認各品項實際是購買或租借。</p><div class="stop-tags"><span class="mini-tag">滑雪體驗</span><span class="mini-tag">雪地活動</span><span class="mini-tag">確認租借品項及尺寸</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">19:00</div><h3>晚餐｜新宿美食</h3></div><a aria-label="在 Google 地圖開啟：晚餐｜新宿美食" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=SHOGUN%20BURGER%20%E6%96%B0%E5%AE%BF" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>可選 SHOGUN BURGER（平均約 &yen;2,000）或桜すし（約 &yen;330&ndash;&yen;910／盤）；實際價目依店內菜單。</p><div class="stop-tags"><span class="mini-tag">SHOGUN BURGER 約 &yen;2,000</span><span class="mini-tag">桜すし 約 &yen;330&ndash;&yen;910／盤</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">20:00</div><h3>Alpen TOKYO 新宿｜運動用品採購</h3></div><a aria-label="在 Google 地圖開啟：Alpen TOKYO 新宿｜運動用品採購" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=Alpen%20TOKYO%20%E6%96%B0%E5%AE%BF" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>逛運動用品、戶外裝備與服飾。滑雪回程若延誤，可縮短購物時間，優先購買清單上的必需品。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性｜視回程時間調整</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">22:00</div><h3>新宿西口 &rarr; 上野御徒町</h3></div><a aria-label="在 Google 地圖開啟：新宿西口 &rarr; 上野御徒町" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E8%A5%BF%E5%8F%A3%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車返回上野，提供的單程參考費用約 &yen;220。</p></article></div>
-<div class="callout">♡ 雪場營運、雪況、團體集合及交通依訂購憑證與官方公告為準；租借品項和費用請現場再次確認。</div>
+<p class="day-intro">今天早出晚歸，先以滑雪團行程為主，再安排晚餐與 Alpen TOKYO。你們已有雪具與雪衣，出發前先確認裝備清單，並預留面罩、護目鏡與手套的採買預算。</p>
+<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">06:30</div><h3>上野御徒町 &rarr; 新宿西口</h3></div><a aria-label="在 Google 地圖開啟：上野御徒町 &rarr; 新宿西口" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E5%BE%A1%E5%BE%92%E7%94%BA%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車前往新宿西口，提供的單程參考費用約 &yen;220。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">07:20</div><h3>新宿 L 塔集合</h3></div><a aria-label="在 Google 地圖開啟：新宿 L 塔集合" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%93%E3%83%AB%20%E6%96%B0%E5%AE%BFL%E3%82%BF%E3%83%AF%E3%83%BC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>依滑雪行程安排集合，請再次確認集合樓層、報到方式及遊覽車出發時間。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:30&ndash;18:00</div><h3>富士山 YETI 滑雪場</h3></div><a aria-label="在 Google 地圖開啟：富士山 YETI 滑雪場" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%20%E3%82%A4%E3%82%A8%E3%83%86%E3%82%A3" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>體驗滑雪或雪地活動。你們已有雪具與雪衣，可自備長襪及長袖；此次額外配件預算為面罩 ¥2,500／人、護目鏡 ¥1,000／人、手套 ¥1,000／人，兩人合計 ¥9,000（約 NT$1,830）。實際販售價格依現場為準。</p><div class="stop-tags"><span class="mini-tag">滑雪體驗</span><span class="mini-tag">雪地活動</span><span class="mini-tag">自備雪具與雪衣</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">19:00</div><h3>晚餐｜新宿美食</h3></div><a aria-label="在 Google 地圖開啟：晚餐｜新宿美食" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=SHOGUN%20BURGER%20%E6%96%B0%E5%AE%BF" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>可選 SHOGUN BURGER（平均約 &yen;2,000）或桜すし（約 &yen;330&ndash;&yen;910／盤）；實際價目依店內菜單。</p><div class="stop-tags"><span class="mini-tag">SHOGUN BURGER 約 &yen;2,000</span><span class="mini-tag">桜すし 約 &yen;330&ndash;&yen;910／盤</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">20:00</div><h3>Alpen TOKYO 新宿｜運動用品採購</h3></div><a aria-label="在 Google 地圖開啟：Alpen TOKYO 新宿｜運動用品採購" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=Alpen%20TOKYO%20%E6%96%B0%E5%AE%BF" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>逛運動用品、戶外裝備與服飾。滑雪回程若延誤，可縮短購物時間，優先購買清單上的必需品。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性｜視回程時間調整</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">22:00</div><h3>新宿西口 &rarr; 上野御徒町</h3></div><a aria-label="在 Google 地圖開啟：新宿西口 &rarr; 上野御徒町" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E8%A5%BF%E5%8F%A3%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車返回上野，提供的單程參考費用約 &yen;220。</p></article></div>
+<div class="callout">♡ 雪場營運、雪況、團體集合及交通依訂購憑證與官方公告為準；面罩、護目鏡與手套的販售價格請以現場為準。</div>
 </div>
 </section>
 <section aria-labelledby="day4-title" class="day-card" id="day4">
@@ -424,13 +447,13 @@
 <path d="M55 148h11m-8 6h7m82-5h13m-11 7h10" stroke="#d48668" stroke-linecap="round" stroke-width="2"></path>
 <path d="M105 15l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#fff8eb"></path>
 </svg>
-<p class="art-caption">買到喜歡的小東西</p>
+<p class="art-caption"></p>
 </aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day4-title">木更津 Outlet・東京車站購物</h2><div class="day-date">11 / 18 WED &middot; DAY 04</div></div>
 <p class="day-intro">上午出發前往木更津 Outlet，下午回到東京站一帶吃晚餐、散步與採買。回飯店後留時間整理行李，為隔天晚班機做準備。</p>
 <div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:00</div><h3>上野 &rarr; 京橋</h3></div><a aria-label="在 Google 地圖開啟：上野 &rarr; 京橋" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E6%A9%8B%E9%A7%85%20%E6%9D%B1%E4%BA%AC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車往京橋，提供的單程參考費用約 &yen;178，再前往東京站八重洲口巴士乘車處。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:30</div><h3>東京站八重洲口 &rarr; 三井 Outlet Park 木更津</h3></div><a aria-label="在 Google 地圖開啟：東京站八重洲口 &rarr; 三井 Outlet Park 木更津" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%E6%9D%B1%E4%BA%AC%E5%85%AB%E9%87%8D%E6%B4%B2" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘高速巴士前往木更津，提供的單程參考車資約 &yen;1,500。建議提早到站並確認乘車月台、是否需預約。</p><div class="stop-tags"><span class="mini-tag">高速巴士約 &yen;1,500</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:00&ndash;15:00</div><h3>三井 Outlet Park 木更津</h3></div><a aria-label="在 Google 地圖開啟：三井 Outlet Park 木更津" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%89%E4%BA%95%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88%E3%83%91%E3%83%BC%E3%82%AF%20%E6%9C%A8%E6%9B%B4%E6%B4%A5" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>安排四小時購物時間，先逛必買品牌，再留時間用餐、試穿與結帳。</p><div class="stop-tags"><span class="mini-tag">Outlet 購物</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">15:00</div><h3>木更津 Outlet &rarr; 東京站八重洲口</h3></div><a aria-label="在 Google 地圖開啟：木更津 Outlet &rarr; 東京站八重洲口" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%89%E4%BA%95%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88%E3%83%91%E3%83%BC%E3%82%AF%20%E6%9C%A8%E6%9B%B4%E6%B4%A5%20%E3%83%90%E3%82%B9%E4%B9%97%E3%82%8A%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘高速巴士返回東京，提供的單程參考車資約 &yen;1,500。請預留交通延誤時間。</p><div class="stop-tags"><span class="mini-tag">高速巴士約 &yen;1,500</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">16:00</div><h3>晚餐｜東京站周邊</h3></div><a aria-label="在 Google 地圖開啟：晚餐｜東京站周邊" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%A8%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B5%E3%82%A6%E3%82%B9%20%E5%85%AB%E9%87%8D%E6%B4%B2" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>可考慮エリックサウス（印度料理，平均約 &yen;1,500）或札幌ドミニカ（日式咖哩，平均約 &yen;1,500）。</p><div class="stop-tags"><span class="mini-tag">依排隊情況選擇</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">17:00</div><h3>東京車站周圍閑晃</h3></div><a aria-label="在 Google 地圖開啟：東京車站周圍閑晃" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E9%A7%85%E4%B8%80%E7%95%AA%E8%A1%97" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>欣賞丸之內紅磚車站，或逛東京車站一番街，尋找動漫周邊與東京伴手禮。</p><div class="stop-tags"><span class="mini-tag">紅磚車站</span><span class="mini-tag">動漫周邊・伴手禮</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">20:00</div><h3>京橋 &rarr; 上野</h3></div><a aria-label="在 Google 地圖開啟：京橋 &rarr; 上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E6%A9%8B%E9%A7%85%20%E6%9D%B1%E4%BA%AC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車返回上野，提供的單程參考費用約 &yen;178。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">回飯店後</div><h3>整理行李｜分配重量</h3></div><a aria-label="在 Google 地圖開啟：整理行李｜分配重量" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E6%9D%B1%E9%87%91%E5%B1%8B%E3%83%9B%E3%83%86%E3%83%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>先整理購物戰利品與托運行李，檢查重量及隨身行李規定，護照、充電器與重要文件分開收好。</p><div class="stop-tags"><span class="mini-tag">行李重量檢查</span></div></article></div>
-<div class="callout">♡ 往返木更津的高速巴士建議預先確認班次與預約規則；回程航班的報到與行李規則，請依 Peach 官方公告及訂位資訊確認。</div>
+<div class="callout">♡ 往返木更津的高速巴士建議預先確認班次與預約規則；回飯店後檢查行李重量與隔天回程所需物品。</div>
 </div>
 </section>
 <section aria-labelledby="day5-title" class="day-card" id="day5">
@@ -448,7 +471,7 @@
 <path d="M77 44c-8-8-19 4-9 13l9 8 9-8c10-9-1-21-9-13z" fill="#d48668"></path>
 <path d="M139 57l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#9cae9a"></path>
 </svg>
-<p class="art-caption">巷弄裡的日式慢時光</p>
+<p class="art-caption"></p>
 </aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day5-title">神樂坂・赤城神社・搭機返台</h2><div class="day-date">11 / 19 THU &middot; DAY 05</div></div>
@@ -463,7 +486,7 @@
 <path d="M63 111l29-3m24-23l-12 20" stroke="#d48668" stroke-linecap="round" stroke-width="3"></path>
 <path d="M39 148v-28l31-22 31 22v28z" fill="#e4ece0" stroke="#71866f" stroke-linejoin="round" stroke-width="2.5"></path><path d="M31 121l39-29 39 29" fill="none" stroke="#71866f" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path><rect fill="#fffaf1" height="21" rx="2" stroke="#71866f" stroke-width="2" width="17" x="62" y="127"></rect>
 <path d="M160 120c-7-7-17 4-8 12l8 7 8-7c9-8-1-19-8-12z" fill="#d48668"></path><path d="M177 91l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#d6b66d"></path>
-</svg><p class="art-caption">平安回家，把回憶帶回來</p></aside>
+</svg><p class="art-caption"></p></aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day6-title">回到台灣・旅程的甜甜收尾</h2><div class="day-date">11 / 20 FRI &middot; HOME</div></div>
 <p class="day-intro">夜班機抵達桃園後，還有最後一段回家的路。先領好行李，再確認客運乘車處，平安把這趟一週年回憶帶回家。</p>
@@ -471,12 +494,12 @@
 <div class="callout">♡ 凌晨客運班次請務必出發前再次確認；旅途辛苦，返家後好好休息。</div>
 </div>
 </section>
-<div class="preflight"><div aria-hidden="true" class="preflight-icon">♡</div><div><h3>出發前最後確認</h3><p>護照與航班資料、回程 Skyliner 劃位、木更津往返巴士、YETI 雪場營運與裝備、行李重量。班次、費用與營業資訊請以官方最新公告為準。</p></div></div>
+<div class="preflight"><div aria-hidden="true" class="preflight-icon">♡</div><div><h3>出發前最後確認</h3><p>護照與航班資料、回程 Skyliner 劃位、木更津往返巴士、YETI 雪場營運與裝備、行李重量及航班報到截止時間。班次、費用與營業資訊請以官方最新公告為準。</p></div></div>
 <div class="flight-back"><div><h3>回家啦｜Peach MM627</h3><p>11/19（四）22:05 成田 T1 起飛，11/20（五）01:25 抵達桃園 T1；03:30 預計搭乘國光客運 1841 回松山。</p></div><div class="flight-time">東京 &rarr; 台灣<br/><span style="font-weight:500">把回憶帶回家 ♡</span></div></div>
 </main>
 <footer class="footer">
 <span aria-hidden="true" class="tiny-heart">&hearts;</span>
-<div>願每一次牽手，都像第一次一樣心動。</div>
+<div>每一次牽手，都像第一次心動。</div>
 <div>OUR LITTLE ANNIVERSARY TRIP &middot; NOVEMBER 14&ndash;20, 2026</div>
 <a class="back-top" href="#top">回到手帳封面 &uarr;</a>
 </footer>
