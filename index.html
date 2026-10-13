@@ -1,15 +1,25 @@
 <!doctype html>
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f7f4ec">
-<meta name="description" content="東京、鎌倉、富士山五日一週年紀念旅行手帳：每日景點、交通提醒、地圖連結與溫柔手繪插圖。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="戀愛一週年旅行手帳｜東京・鎌倉・富士山">
-<meta property="og:description" content="把喜歡的日常，收進一趟小旅行裡。一起收藏東京下町、湘南海岸、富士山與紀念回憶。">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f5e6dc'/%3E%3Cpath d='M32 48S10 35 10 21c0-12 15-15 22-3 7-12 22-9 22 3 0 14-22 27-22 27Z' fill='%23d48668'/%3E%3C/svg%3E">
-<title>戀愛一週年旅行手帳｜東京・鎌倉・富士山</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f7f4ec" name="theme-color"/>
+<meta content="東京、鎌倉、富士山六日行程手帳：含出發夜、每日交通時間與費用、餐廳推薦、景點地圖與回程提醒。" name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="戀愛一週年旅行手帳｜東京・鎌倉・富士山 2026" property="og:title"/>
+<meta content="從桃園出發，收藏東京下町、湘南海岸、富士山滑雪與東京購物時光；附每日交通、餐廳與地圖。" property="og:description"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f5e6dc'/%3E%3Cpath d='M32 48S10 35 10 21c0-12 15-15 22-3 7-12 22-9 22 3 0 14-22 27-22 27Z' fill='%23d48668'/%3E%3C/svg%3E" rel="icon"/>
+<title>戀愛一週年旅行手帳｜東京・鎌倉・富士山 2026</title>
 <style>
   :root{
     --paper:#f7f4ec; --paper-deep:#eee9dc; --card:#fffdf8; --ink:#343f39;
@@ -135,326 +145,261 @@
     a{text-decoration:none}
   }
 
+
+  .travel-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .stop-time{display:inline-flex;align-items:center;margin:0 0 5px;padding:2px 9px;border-radius:8px;background:#f5e6dc;color:#9c5e48;font-size:.74rem;font-weight:850;letter-spacing:.02em;line-height:1.7}
+  .stop-heading .stop-main{flex:1;min-width:0}
+  .stop-detail{margin-top:6px!important;color:#58665b!important}
+  .callout strong{color:#685936}
+  .day-card.bookend .art-panel{min-height:190px}
+  .day-card.bookend .day-intro{max-width:none}
+  .important-reminder{display:flex;align-items:flex-start;gap:10px;margin:16px 0 0;padding:13px 16px;border:1px solid #e8dcc1;background:#fbf5e7;border-radius:14px;color:#786b50;font-size:.82rem}
+  .important-reminder strong{color:#6f5c32}
+  @media(max-width:900px){.travel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:780px){.travel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:520px){.travel-grid{grid-template-columns:1fr}}
+  @media print{
+    .travel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .day-card.bookend{grid-template-columns:110px minmax(0,1fr)}
+    .day-card.bookend .day-art{max-width:100px}
+    .important-reminder{background:#fff!important;border-color:#bbb!important;color:#333!important}
+  }
+
+  .inline-official-link{display:inline-block;margin-top:5px;color:#526957;font-weight:800;text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">跳至主要行程</a>
-<div class="reading-progress" id="reading-progress" role="progressbar" aria-label="頁面閱讀進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="reading-progress-bar"></span></div>
+<div aria-label="頁面閱讀進度" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="reading-progress" id="reading-progress" role="progressbar"><span id="reading-progress-bar"></span></div>
 <div class="wrap" id="top">
-  <div class="topline">
-    <div class="brand"><span class="brand-mark" aria-hidden="true">♥</span><span>小日子旅行手帳</span></div>
-    <div class="top-tag">TOKYO</div>
-  </div>
-
-  <header class="hero">
-    <span class="heart-note" aria-hidden="true">♡</span>
-    <div>
-      <div class="eyebrow">OUR FIRST ANNIVERSARY</div>
-      <h1>慶祝戀愛<span>滿一歲啦！</span></h1>
-      <p class="hero-copy">把喜歡的日常，收進一趟小旅行裡。從東京下町的香氣、湘南海岸的電車，到富士山腳下的雪，慢慢走、慢慢吃，也慢慢把回憶存起來。</p>
-      <div class="hero-meta">
-        <span class="pill">✦ 2026.11.15 – 11.19</span>
-        <span class="pill peach">♡ 一週年紀念旅行</span>
-      </div>
-    </div>
-    <svg class="hero-art" viewBox="0 0 380 300" role="img" aria-label="兩位旅人、東京街景與小愛心的溫柔插畫">
-      <ellipse cx="190" cy="268" rx="145" ry="13" fill="#eee7d8"/>
-      <circle cx="277" cy="63" r="32" fill="#f3dfce"/>
-      <path d="M36 221V132h54v89M49 132v-22h29v22M48 154h11m11 0h11m-33 18h11m11 0h11m-33 18h11m11 0h11" fill="#dce5d6" stroke="#92a58f" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M286 224V117h42v107M297 117V99h20v18m-19 20h8m7 0h8m-23 17h8m7 0h8m-23 17h8m7 0h8" fill="#ead4c4" stroke="#c68f74" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M115 249l24-95 24 95" fill="#aebda8" stroke="#738b75" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M128 208h22m-27 19h32" stroke="#738b75" stroke-width="2" stroke-linecap="round"/>
-      <path d="M165 232l25-75 25 75" fill="#cad7c0" stroke="#829681" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M178 195h24m-30 18h36" stroke="#829681" stroke-width="2" stroke-linecap="round"/>
-      <path d="M90 245h208" stroke="#879982" stroke-width="2" stroke-linecap="round"/>
-      <!-- little couple -->
-      <path d="M143 213c-1-22 4-37 18-40 15-2 22 12 20 33l-2 30h-35z" fill="#d58b6b" stroke="#a96c53" stroke-width="2"/>
-      <circle cx="160" cy="163" r="17" fill="#f0c8a9" stroke="#bd8c70" stroke-width="2"/>
-      <path d="M143 165c-4-18 8-29 21-26 10 1 16 8 15 19l-8-7-10 2-10-4z" fill="#5b4b42"/>
-      <path d="M177 202l18 20m-37 12l-8 21m30-20l10 20" fill="none" stroke="#a96c53" stroke-width="7" stroke-linecap="round"/>
-      <path d="M192 214c0-15 9-23 19-23 12 0 19 10 17 25l-3 19h-32z" fill="#78907c" stroke="#536e5a" stroke-width="2"/>
-      <circle cx="210" cy="166" r="17" fill="#f4cfb3" stroke="#bd8c70" stroke-width="2"/>
-      <path d="M193 164c0-15 9-24 21-23 13 1 17 13 14 23l-6-7-12 1-8-5z" fill="#5a4942"/>
-      <path d="M197 204l-13 17m32 17l-1 20m9-19l13 18" fill="none" stroke="#536e5a" stroke-width="7" stroke-linecap="round"/>
-      <path d="M167 184q14 11 27 0" fill="none" stroke="#c48165" stroke-width="2.5" stroke-linecap="round"/>
-      <path d="M235 103c-9-9-22 4-10 14l10 9 10-9c12-10-1-23-10-14z" fill="#d48668" opacity=".9"/>
-      <path d="M74 78l3 8 8 3-8 3-3 8-3-8-8-3 8-3zM324 180l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#d6b66d"/>
-      <path d="M238 247q15-18 28-2" stroke="#8da08a" fill="none" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-  </header>
-
-  <div class="section-label">出發資訊 / TRAVEL DETAILS</div>
-  <section class="travel-grid" aria-label="航班與交通資訊">
-    <div class="info-card">
-      <div class="info-title"><span aria-hidden="true">🚌</span> 出發前夜 · 11/14（六）</div>
-      <strong>1841 客運｜松山機場 22:00</strong>
-      <p>車程約 50 分鐘 · 車資 NT$112<br>請預留轉乘與報到時間。</p>
-    </div>
-    <div class="info-card">
-      <div class="info-title"><span aria-hidden="true">✈</span> 去程 · Peach MM620</div>
-      <strong>11/15（日）02:25 → 06:30</strong>
-      <p>桃園機場 T1 出發<br>成田機場 T1 抵達</p>
-    </div>
-    <div class="info-card">
-      <div class="info-title"><span aria-hidden="true">✈</span> 回程 · Peach MM627</div>
-      <strong>11/19（四）22:05 → 01:25</strong>
-      <p>成田機場 T1 出發<br>11/20（五）凌晨抵達桃園 T1</p>
-    </div>
-  </section>
-
-  <section class="hotel-row" aria-label="住宿資訊">
-    <div>
-      <div class="info-title">⌂ 旅行中的小基地</div>
-      <div class="hotel-name">上野東金屋ホテル</div>
-      <address>〒110-0015 東京都台東区東上野３丁目１７−５ 1F</address>
-    </div>
-    <a class="map-link" href="https://maps.app.goo.gl/ypz6ZM2K9GZfupe3A" target="_blank" rel="noopener noreferrer">在地圖中開啟 ↗</a>
-  </section>
-  <p class="subtle-note">小提醒：航班與交通時間以票券及當日公告為準；以下日程依提供的景點整理，沒有另外指定的時間就留給旅途中的彈性。</p>
-
-  <div class="day-nav-wrap">
-    <nav class="day-nav wrap" aria-label="快速跳至每日行程">
-      <a href="#day1"><span class="nav-num">01</span>11/15 下町散策</a>
-      <a href="#day2"><span class="nav-num">02</span>11/16 鎌倉・橫濱</a>
-      <a href="#day3"><span class="nav-num">03</span>11/17 富士山滑雪</a>
-      <a href="#day4"><span class="nav-num">04</span>11/18 木更津購物</a>
-      <a href="#day5"><span class="nav-num">05</span>11/19 神樂坂</a>
-    </nav>
-    <p class="nav-hint"><span aria-hidden="true">↔</span> 手機上可左右滑動日期，快速跳至想去的地方</p>
-  </div>
-
-  <main id="main-content" tabindex="-1">
-    <section class="day-card" id="day1" aria-labelledby="day1-title">
-      <aside class="art-panel rose">
-        <svg class="day-art" viewBox="0 0 220 190" role="img" aria-label="咖啡杯、和菓子與日式街屋插畫">
-          <circle cx="111" cy="90" r="70" fill="#f7dccc"/>
-          <path d="M29 146V81h31v65M35 81V66h19v15m-14 14h7m-7 13h7m-7 13h7" fill="#fff8ef" stroke="#c78b6c" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M161 146V66h31v80M168 66V53h17v13m-15 26h6m6 0h6m-18 15h6m6 0h6" fill="#f8f1df" stroke="#c78b6c" stroke-width="2" stroke-linejoin="round"/>
-          <ellipse cx="110" cy="154" rx="76" ry="9" fill="#e4c9b7"/>
-          <path d="M65 91h64v47a10 10 0 0 1-10 10H75a10 10 0 0 1-10-10z" fill="#fffdf8" stroke="#aa7861" stroke-width="2.5"/>
-          <path d="M129 101h13a13 13 0 0 1 0 26h-13" fill="none" stroke="#aa7861" stroke-width="3"/>
-          <ellipse cx="97" cy="91" rx="32" ry="8" fill="#b27a51" stroke="#aa7861" stroke-width="2"/>
-          <path d="M86 83q-5-9 2-14m15 14q-5-9 2-14" fill="none" stroke="#fffdf8" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M58 62q-10-9-15 2-3 8 8 15l7 5 7-6q11-9 5-16-6-7-12 0z" fill="#d48668"/>
-          <path d="M152 48l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#d6b66d"/>
-          <path d="M87 154q20-7 40 0" stroke="#d5b9a6" stroke-width="2" fill="none"/>
-          <path d="M47 158q8-13 16-1m97 0q8-13 16-1" stroke="#829681" stroke-width="2" fill="none" stroke-linecap="round"/>
-        </svg>
-        <p class="art-caption">咖啡香與下町散步</p>
-      </aside>
-      <div class="day-content">
-        <div class="section-heading"><h2 id="day1-title">東京下町散策</h2><div class="day-date">11 / 15 SUN · DAY 01</div></div>
-        <p class="day-intro">抵達東京後，用老街、庭園、茶香和街頭小吃，輕輕打開這趟一週年旅行。</p>
-        <div class="timeline">
-          <article class="stop">
-            <div class="stop-heading"><h3>01｜清澄白河・釜飯・清澄庭園</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%B8%85%E6%BE%84%E5%BA%AD%E5%9C%92%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：01｜清澄白河・釜飯・清澄庭園">地圖 ↗</a></div>
-            <p>先在融合老街、藝術與咖啡文化的清澄白河走走，品嚐以高湯與食材一同炊煮、香氣飽滿的釜飯。接著到清澄庭園，欣賞池塘、石燈籠與日式庭園景致，享受片刻安靜。</p>
-            <div class="stop-tags"><span class="mini-tag">老街咖啡</span><span class="mini-tag">日本庭園</span><span class="mini-tag">釜飯</span></div>
-          </article>
-          <article class="stop">
-            <div class="stop-heading"><h3>02｜人形町・壽堂黃金芋・焙茶</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E5%A3%BD%E5%A0%82%20%E9%BB%83%E9%87%91%E8%8A%8B%20%E4%BA%BA%E5%BD%A2%E7%94%BA%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：02｜人形町・壽堂黃金芋・焙茶">地圖 ↗</a></div>
-            <p>沿著有江戶風情的人形町尋訪和菓子老舖。可以留意壽堂的黃金芋，再搭配香氣溫暖、苦澀感較低的焙茶，安排一段甜點與茶的悠閒時間。</p>
-            <div class="stop-tags"><span class="mini-tag">和菓子</span><span class="mini-tag">傳統茶舖</span></div>
-          </article>
-          <article class="stop">
-            <div class="stop-heading"><h3>03｜戶越銀座商店街・米食點心巡禮</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%88%B6%E8%B6%8A%E9%8A%80%E5%BA%A7%E5%95%86%E5%BA%97%E8%A1%97%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：03｜戶越銀座商店街・米食點心巡禮">地圖 ↗</a></div>
-            <p>走進在地人喜愛的長型商店街，邊逛邊找喜歡的小吃：醬油或黃豆粉口味的米糰子、柔軟有彈性的米麵包，還有鮭魚、梅干或昆布等口味的日式飯糰。</p>
-            <div class="stop-tags"><span class="mini-tag">米糰子</span><span class="mini-tag">米麵包</span><span class="mini-tag">飯糰</span></div>
-          </article>
-        </div>
-        <div class="callout">♡ 這天從清晨抵達開始，建議先確認行李寄放、早餐與休息安排，再決定移動節奏。三個區域跨度不小，若精神或交通狀況不理想，可把戶越銀座列為彈性行程；各店營業時間請出發前再確認。</div>
-      </div>
-    </section>
-
-    <section class="day-card" id="day2" aria-labelledby="day2-title">
-      <aside class="art-panel blue">
-        <svg class="day-art" viewBox="0 0 220 190" role="img" aria-label="湘南海岸、電車與大佛的可愛插畫">
-          <circle cx="167" cy="42" r="18" fill="#f2d7a0"/>
-          <path d="M18 133q28-17 55 0t55 0 55 0 22 0v29H18z" fill="#a8cbd1"/>
-          <path d="M18 146q28-15 55 0t55 0 55 0 22 0" fill="none" stroke="#78aab5" stroke-width="2.5"/>
-          <path d="M28 129l31-54 31 54" fill="#d8e1d8" stroke="#8ca18e" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M46 97l13-22 13 22" fill="#f7f4ec"/>
-          <!-- buddha -->
-          <path d="M137 123q-8-16 2-26 11-11 22 0 10 10 2 26l11 15h-47z" fill="#829b91" stroke="#617b72" stroke-width="2"/>
-          <circle cx="150" cy="86" r="16" fill="#91a99e" stroke="#617b72" stroke-width="2"/>
-          <path d="M136 83q1-14 14-14t14 14" fill="#617b72"/>
-          <path d="M143 88h3m9 0h3m-10 7q3 2 6 0" stroke="#526b63" stroke-width="2" stroke-linecap="round"/>
-          <path d="M123 138h54" stroke="#617b72" stroke-width="3" stroke-linecap="round"/>
-          <!-- train -->
-          <path d="M25 122h64a8 8 0 0 1 8 8v21H17v-21a8 8 0 0 1 8-8z" fill="#f8f3e9" stroke="#6f8790" stroke-width="2"/>
-          <path d="M23 128h18v13H23zm24 0h18v13H47zm24 0h18v13H71z" fill="#9fc3cc" stroke="#6f8790" stroke-width="1.5"/>
-          <path d="M15 151h84" stroke="#6f8790" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="33" cy="153" r="4" fill="#6f8790"/><circle cx="81" cy="153" r="4" fill="#6f8790"/>
-          <path d="M105 42l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#d48668"/>
-          <path d="M105 174q22-13 43 0" stroke="#8da5a7" fill="none" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <p class="art-caption">湘南海風與復古電車</p>
-      </aside>
-      <div class="day-content">
-        <div class="section-heading"><h2 id="day2-title">鎌倉・橫濱</h2><div class="day-date">11 / 16 MON · DAY 02</div></div>
-        <p class="day-intro">從古都寺院出發，沿著湘南海岸追尋青春動畫場景，再用橫濱港灣夜景收尾。</p>
-        <div class="timeline">
-          <article class="stop">
-            <div class="stop-heading"><h3>01｜鎌倉・高德院鎌倉大佛</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%BE%B7%E9%99%A2%20%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BD%9B" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：01｜鎌倉・高德院鎌倉大佛">地圖 ↗</a></div>
-            <p>走訪曾是鎌倉幕府政治中心的古都，在寺院與傳統街景間散步。高德院的青銅阿彌陀如來坐像建於 13 世紀，是鎌倉的重要代表地標。</p>
-          </article>
-          <article class="stop">
-            <div class="stop-heading"><h3>02｜鎌倉高校前平交道</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85%20%E5%B9%B3%E4%BA%A4%E9%81%93" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：02｜鎌倉高校前平交道">地圖 ↗</a></div>
-            <p>朝聖《灌籃高手》經典開場畫面。江之電列車、平交道與湘南海面交會，是很有辨識度的海岸風景；拍照時請留意道路與鐵道安全。</p>
-            <div class="stop-tags"><span class="mini-tag">動畫巡禮</span><span class="mini-tag">湘南海景</span><span class="mini-tag optional-tag">留意人潮與交通</span></div>
-          </article>
-          <article class="stop">
-            <div class="stop-heading"><h3>03｜江之電・湘南單軌電車</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%B1%9F%E4%B9%8B%E9%9B%BB%20%E9%8E%8C%E5%80%89%E9%A7%85%20%E6%B9%98%E5%8D%97%E5%96%AE%E8%BB%8C%E9%9B%BB%E8%BB%8A%20%E6%B9%98%E5%8D%97%E6%B1%9F%E4%B9%8B%E5%B3%B6%E9%A7%85" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：03｜江之電・湘南單軌電車">地圖 ↗</a></div>
-            <p>搭乘行經住宅街、寺院與海岸的復古江之電；再體驗車廂懸吊在軌道下方、像雲霄飛車般的湘南單軌電車。兩者是不同路線，出發前確認銜接方式較安心。</p><div class="stop-tags"><span class="mini-tag optional-tag">湘南單軌可視時間彈性取捨</span></div>
-          </article>
-          <article class="stop">
-            <div class="stop-heading"><h3>04｜橫濱港未來・紅磚倉庫</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%A9%AB%E6%BF%B1%E7%B4%85%E7%A3%9A%E5%80%89%E5%BA%AB" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：04｜橫濱港未來・紅磚倉庫">地圖 ↗</a></div>
-            <p>前往港未來 21 海濱一帶散步、購物與欣賞夜景。摩天大樓、港灣步道與保留歷史風貌的紅磚倉庫，呈現新舊交融的城市氣氛。</p>
-            <div class="stop-tags"><span class="mini-tag">港灣夜景</span><span class="mini-tag">紅磚倉庫</span></div>
-          </article>
-        </div>
-        <div class="callout">♡ 鎌倉與橫濱都值得慢慢逛，當天移動點較多，建議先確認電車轉乘與末班車資訊，再依時間決定停留長短。</div>
-      </div>
-    </section>
-
-    <section class="day-card" id="day3" aria-labelledby="day3-title">
-      <aside class="art-panel">
-        <svg class="day-art" viewBox="0 0 220 190" role="img" aria-label="富士山、雪花與滑雪者插畫">
-          <circle cx="164" cy="42" r="22" fill="#f1d59d"/>
-          <path d="M18 143l66-99 62 99z" fill="#a9bba5" stroke="#748f78" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M58 83l26-39 25 40-15-8-10 11-10-9z" fill="#fffdf7" stroke="#d7e1d5" stroke-width="1.5" stroke-linejoin="round"/>
-          <path d="M96 143l38-61 47 61z" fill="#d8e3d5" stroke="#8fa58d" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M121 104l13-22 17 22-11-4-6 7-6-5z" fill="#fffdf7"/>
-          <path d="M18 145h183" stroke="#8fa58d" stroke-width="3" stroke-linecap="round"/>
-          <!-- skier -->
-          <circle cx="151" cy="116" r="8" fill="#f2c9ad" stroke="#b78266" stroke-width="1.5"/>
-          <path d="M144 114q0-9 8-9t8 9" fill="#d48668"/>
-          <path d="M148 125l-8 20 19 4 4-19z" fill="#d48668" stroke="#ab7158" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M147 132l-14 8m23-6 13 8m-25 6-11 14m25-12 13 11" stroke="#6b806e" stroke-width="3.5" stroke-linecap="round"/>
-          <path d="M121 166l36-5m-20 10 36-5" stroke="#687f88" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M39 48l2 6 6 2-6 2-2 6-2-6-6-2 6-2zM192 83l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#fffdf7" stroke="#9db2b6" stroke-width="1"/>
-          <circle cx="42" cy="111" r="3" fill="#fffdf7"/><circle cx="185" cy="128" r="4" fill="#fffdf7"/><circle cx="110" cy="27" r="3" fill="#fffdf7"/>
-        </svg>
-        <p class="art-caption">雪白富士山小冒險</p>
-      </aside>
-      <div class="day-content">
-        <div class="section-heading"><h2 id="day3-title">富士山滑雪・新宿採購</h2><div class="day-date">11 / 17 TUE · DAY 03</div></div>
-        <p class="day-intro">白天到雪場感受冬季運動，回到東京後再為裝備與日常運動用品補貨。</p>
-        <div class="timeline">
-          <article class="stop">
-            <div class="stop-heading"><h3>01｜富士山 YETI 滑雪場</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=Snow%20Town%20Yeti%20%E6%BB%91%E9%9B%AA%E5%A0%B4%20%E9%9D%9C%E5%B2%A1" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：01｜富士山 YETI 滑雪場">地圖 ↗</a></div>
-            <p>在富士山腳下體驗雪地活動。若是初次滑雪，可以先了解雙板或單板的入門選項，並依需求租借裝備，在安全範圍內享受雪上時光。</p>
-            <div class="stop-tags"><span class="mini-tag">滑雪體驗</span><span class="mini-tag">雪景</span></div>
-          </article>
-          <article class="stop">
-            <div class="stop-heading"><h3>02｜Alpen TOKYO 新宿</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=Alpen%20TOKYO%20%E6%96%B0%E5%AE%BF" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：02｜Alpen TOKYO 新宿">地圖 ↗</a></div>
-            <p>逛逛運動服飾、戶外用品與各類運動裝備。事先列好購物清單，再依樓層與商品分類挑選，會更有效率。</p>
-            <div class="stop-tags"><span class="mini-tag">運動用品</span><span class="mini-tag">新宿購物</span><span class="mini-tag optional-tag">視滑雪返程時間調整</span></div>
-          </article>
-        </div>
-        <div class="callout">♡ 雪場交通可能需要較多轉乘與等待，請事先確認當日雪況、營業資訊、租借方式及往返交通；若回東京時間較晚，Alpen 可視體力調整成短逛。</div>
-      </div>
-    </section>
-
-    <section class="day-card" id="day4" aria-labelledby="day4-title">
-      <aside class="art-panel gold">
-        <svg class="day-art" viewBox="0 0 220 190" role="img" aria-label="紅磚車站與購物袋插畫">
-          <circle cx="177" cy="39" r="20" fill="#f4d7a1"/>
-          <path d="M21 143V70l89-35 89 35v73z" fill="#c98366" stroke="#a86852" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M15 72l95-40 95 40" fill="none" stroke="#a86852" stroke-width="4" stroke-linecap="round"/>
-          <path d="M33 83h22v26H33zm37 0h22v26H70zm56 0h22v26h-22zm37 0h22v26h-22z" fill="#f6e9d7" stroke="#a86852" stroke-width="2"/>
-          <path d="M92 143v-25a18 18 0 0 1 36 0v25z" fill="#f3dfbd" stroke="#a86852" stroke-width="2"/>
-          <path d="M21 144h178" stroke="#a86852" stroke-width="3" stroke-linecap="round"/>
-          <!-- shopping bags -->
-          <path d="M44 132h34l-3 39H47z" fill="#fffaf0" stroke="#6f846e" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M53 132v-8a8 8 0 0 1 16 0v8" fill="none" stroke="#6f846e" stroke-width="2"/>
-          <path d="M141 132h32l-3 39h-26z" fill="#e6eee1" stroke="#6f846e" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M148 132v-8a8 8 0 0 1 16 0v8" fill="none" stroke="#6f846e" stroke-width="2"/>
-          <path d="M55 148h11m-8 6h7m82-5h13m-11 7h10" stroke="#d48668" stroke-width="2" stroke-linecap="round"/>
-          <path d="M105 15l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#fff8eb"/>
-        </svg>
-        <p class="art-caption">買到喜歡的小東西</p>
-      </aside>
-      <div class="day-content">
-        <div class="section-heading"><h2 id="day4-title">木更津購物・東京車站</h2><div class="day-date">11 / 18 WED · DAY 04</div></div>
-        <p class="day-intro">把白天留給 Outlet 慢慢挖寶，回到東京後，再用紅磚建築、伴手禮與日常採買補滿行李箱。</p>
-        <div class="timeline">
-          <article class="stop">
-            <div class="stop-heading"><h3>01｜三井 Outlet Park 木更津</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E4%BA%95%20Outlet%20Park%20%E6%9C%A8%E6%9B%B4%E6%B4%A5" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：01｜三井 Outlet Park 木更津">地圖 ↗</a></div>
-            <p>逛逛國際品牌、日本服飾、運動用品、鞋包與生活雜貨。先列好想買的品牌，再留出用餐、休息與結帳時間，也別忘記確認往返巴士班次。</p>
-            <div class="stop-tags"><span class="mini-tag">Outlet 折扣</span><span class="mini-tag">品牌採購</span></div>
-          </article>
-          <article class="stop">
-            <div class="stop-heading"><h3>02｜東京車站丸之內側</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E8%BB%8A%E7%AB%99%20%E4%B8%B8%E4%B9%8B%E5%85%A7%E5%81%B4" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：02｜東京車站丸之內側">地圖 ↗</a></div>
-            <p>欣賞修復後的經典紅磚站體，感受歷史建築與周圍現代商辦交織的城市風景。</p>
-          </article>
-          <article class="stop">
-            <div class="stop-heading"><h3>03｜東京車站一番街</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E8%BB%8A%E7%AB%99%E4%B8%80%E7%95%AA%E8%A1%97" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：03｜東京車站一番街">地圖 ↗</a></div>
-            <p>前往東京動漫人物街尋找喜歡的角色周邊，再逛東京伴手禮區，挑選餅乾、蛋糕或知名甜點帶回家。</p>
-            <div class="stop-tags"><span class="mini-tag">動漫周邊</span><span class="mini-tag">東京伴手禮</span></div>
-          </article>
-          <article class="stop">
-            <div class="stop-heading"><h3>04｜OK 超市</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=OK%20%E8%B6%85%E5%B8%82%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：04｜OK 超市">地圖 ↗</a></div>
-            <p>以平價日常食品與飲料採買作為補充行程，適合購入零食、飲品或回住宿享用的小東西。分店可依當天的交通動線選擇。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性採買；先確認分店位置</span></div>
-          </article>
-        </div>
-        <div class="callout">♡ Outlet 很容易不知不覺逛久，建議先看好回東京的巴士時刻；戰利品也可以預留空間，讓最後幾天的採買更從容。</div>
-      </div>
-    </section>
-
-    <section class="day-card" id="day5" aria-labelledby="day5-title">
-      <aside class="art-panel lilac">
-        <svg class="day-art" viewBox="0 0 220 190" role="img" aria-label="日式神社、石板小巷與愛心插畫">
-          <circle cx="164" cy="41" r="20" fill="#f2d6a4"/>
-          <path d="M25 147V88h170v59" fill="#f7f1e7" stroke="#aa9eaf" stroke-width="2"/>
-          <path d="M16 91h188l-20-15H36z" fill="#d48668" stroke="#a86f58" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M37 75h146M49 69h122" stroke="#a86f58" stroke-width="3" stroke-linecap="round"/>
-          <path d="M40 91v57m140-57v57" stroke="#aa9eaf" stroke-width="6" stroke-linecap="round"/>
-          <path d="M86 147v-27a24 24 0 0 1 48 0v27" fill="#e5e1eb" stroke="#aa9eaf" stroke-width="2"/>
-          <path d="M93 124h34m-28-7h22" stroke="#aa9eaf" stroke-width="2"/>
-          <path d="M19 161l42-10 23 10 30-9 31 9 35-11 22 11" fill="none" stroke="#aa9eaf" stroke-width="2" stroke-linecap="round"/>
-          <path d="M67 171l10-12 10 12m24 0 10-12 10 12m22 0 10-12 10 12" fill="none" stroke="#c6bdcf" stroke-width="2" stroke-linecap="round"/>
-          <path d="M77 44c-8-8-19 4-9 13l9 8 9-8c10-9-1-21-9-13z" fill="#d48668"/>
-          <path d="M139 57l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#9cae9a"/>
-        </svg>
-        <p class="art-caption">巷弄裡的日式慢時光</p>
-      </aside>
-      <div class="day-content">
-        <div class="section-heading"><h2 id="day5-title">神樂坂・赤城神社</h2><div class="day-date">11 / 19 THU · DAY 05</div></div>
-        <p class="day-intro">回程前用優雅的東京巷弄收尾，走過石板小路、找間喜歡的咖啡館，再到風格清新的神社參拜。</p>
-        <div class="timeline">
-          <article class="stop">
-            <div class="stop-heading"><h3>01｜神樂坂</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E6%A8%82%E5%9D%82%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：01｜神樂坂">地圖 ↗</a></div>
-            <p>沿著石板小巷散步，看看傳統料亭、和菓子店、特色餐館，也能遇見法式餐廳、咖啡館與文藝小店。把最後一天留給沒有目的地的慢慢走。</p>
-            <div class="stop-tags"><span class="mini-tag">石板小巷</span><span class="mini-tag">咖啡與小店</span></div>
-          </article>
-          <article class="stop">
-            <div class="stop-heading"><h3>02｜赤城神社</h3><a class="stop-map" href="https://www.google.com/maps/search/?api=1&query=%E8%B5%A4%E5%9F%8E%E7%A5%9E%E7%A4%BE%20%E7%A5%9E%E6%A8%82%E5%9D%82%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖搜尋：02｜赤城神社">地圖 ↗</a></div>
-            <p>參拜祈求良緣、家庭平安與生活順遂。社殿由建築師隈研吾參與設計，將玻璃、簡潔線條與傳統神社空間結合，呈現清新又現代的樣貌。</p>
-          </article>
-        </div>
-        <div class="callout">♡ 回程航班為 22:05 自成田 T1 起飛。請預先規劃從市區前往成田的交通、回住宿取行李與機場報到時間。</div>
-      </div>
-    </section>
-
-    <div class="preflight">
-      <div class="preflight-icon" aria-hidden="true">♡</div>
-      <div>
-        <h3>旅程最後的小提醒</h3>
-        <p>護照與登機資訊先確認、雪場與 Outlet 交通提前查好、回程日預留行李與前往成田的時間。</p>
-      </div>
-    </div>
-    <div class="flight-back">
-      <div><h3>回家啦｜Peach MM627</h3><p>11/19（四）成田 T1 22:05 起飛，11/20（五）01:25 抵達桃園 T1（跨日）。</p></div>
-      <div class="flight-time">東京 → 台灣<br><span style="font-weight:500">把回憶帶回家 ♡</span></div>
-    </div>
-  </main>
-  <footer class="footer">
-    <span class="tiny-heart" aria-hidden="true">♥</span>
-    <div>每一次牽手，都像第一次心動</div>
-    <div>OUR LITTLE ANNIVERSARY TRIP · NOVEMBER 2026</div>
-    <a class="back-top" href="#top">回到手帳封面 ↑</a>
-  </footer>
+<div class="topline">
+<div class="brand"><span aria-hidden="true" class="brand-mark">&hearts;</span><span>小日子旅行手帳</span></div>
+<div class="top-tag">TOKYO &middot; KAMAKURA &middot; FUJI</div>
+</div>
+<header class="hero">
+<span aria-hidden="true" class="heart-note">♡</span>
+<div>
+<div class="eyebrow">OUR FIRST ANNIVERSARY</div>
+<h1>慶祝戀愛<span>滿一歲啦！</span></h1>
+<p class="hero-copy">把喜歡的日常，收進一趟小旅行裡。從東京下町的香氣、湘南海岸的電車，到富士山腳下的雪，再一起把購物、咖啡與回家的路，慢慢收進一週年的回憶。</p>
+<div class="hero-meta">
+<span class="pill">✦ 2026.11.14 &ndash; 11.20</span>
+<span class="pill peach">♡ 一週年紀念旅行</span>
+</div>
+</div>
+<svg aria-label="兩位旅人、東京街景與小愛心的溫柔插畫" class="hero-art" role="img" viewbox="0 0 380 300">
+<ellipse cx="190" cy="268" fill="#eee7d8" rx="145" ry="13"></ellipse>
+<circle cx="277" cy="63" fill="#f3dfce" r="32"></circle>
+<path d="M36 221V132h54v89M49 132v-22h29v22M48 154h11m11 0h11m-33 18h11m11 0h11m-33 18h11m11 0h11" fill="#dce5d6" stroke="#92a58f" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M286 224V117h42v107M297 117V99h20v18m-19 20h8m7 0h8m-23 17h8m7 0h8m-23 17h8m7 0h8" fill="#ead4c4" stroke="#c68f74" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M115 249l24-95 24 95" fill="#aebda8" stroke="#738b75" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M128 208h22m-27 19h32" stroke="#738b75" stroke-linecap="round" stroke-width="2"></path>
+<path d="M165 232l25-75 25 75" fill="#cad7c0" stroke="#829681" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M178 195h24m-30 18h36" stroke="#829681" stroke-linecap="round" stroke-width="2"></path>
+<path d="M90 245h208" stroke="#879982" stroke-linecap="round" stroke-width="2"></path>
+<!-- little couple -->
+<path d="M143 213c-1-22 4-37 18-40 15-2 22 12 20 33l-2 30h-35z" fill="#d58b6b" stroke="#a96c53" stroke-width="2"></path>
+<circle cx="160" cy="163" fill="#f0c8a9" r="17" stroke="#bd8c70" stroke-width="2"></circle>
+<path d="M143 165c-4-18 8-29 21-26 10 1 16 8 15 19l-8-7-10 2-10-4z" fill="#5b4b42"></path>
+<path d="M177 202l18 20m-37 12l-8 21m30-20l10 20" fill="none" stroke="#a96c53" stroke-linecap="round" stroke-width="7"></path>
+<path d="M192 214c0-15 9-23 19-23 12 0 19 10 17 25l-3 19h-32z" fill="#78907c" stroke="#536e5a" stroke-width="2"></path>
+<circle cx="210" cy="166" fill="#f4cfb3" r="17" stroke="#bd8c70" stroke-width="2"></circle>
+<path d="M193 164c0-15 9-24 21-23 13 1 17 13 14 23l-6-7-12 1-8-5z" fill="#5a4942"></path>
+<path d="M197 204l-13 17m32 17l-1 20m9-19l13 18" fill="none" stroke="#536e5a" stroke-linecap="round" stroke-width="7"></path>
+<path d="M167 184q14 11 27 0" fill="none" stroke="#c48165" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M235 103c-9-9-22 4-10 14l10 9 10-9c12-10-1-23-10-14z" fill="#d48668" opacity=".9"></path>
+<path d="M74 78l3 8 8 3-8 3-3 8-3-8-8-3 8-3zM324 180l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#d6b66d"></path>
+<path d="M238 247q15-18 28-2" fill="none" stroke="#8da08a" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</header>
+<div class="section-label">出發資訊 / TRAVEL DETAILS</div>
+<section aria-label="航班與交通資訊" class="travel-grid"><div class="info-card"><div class="info-title"><span aria-hidden="true">🚌</span> 出發前夜 &middot; 11/14（六）</div><strong>國光客運 1841｜松山機場 22:00</strong><p>車程約 50 分鐘 &middot; 車資 NT$112<br/>23:25 抵達桃園 T1、準備報到；櫃檯開放時間請依 Peach 公告確認。</p></div><div class="info-card"><div class="info-title"><span aria-hidden="true">✈</span> 去程 &middot; Peach MM620</div><strong>11/15（日）02:25 &rarr; 06:30</strong><p>桃園機場 T1 出發<br/>成田機場 T1 抵達。</p></div><div class="info-card"><div class="info-title"><span aria-hidden="true">✈</span> 回程 &middot; Peach MM627</div><strong>11/19（四）22:05 &rarr; 01:25</strong><p>成田機場 T1 出發<br/>11/20（五）凌晨抵達桃園 T1。</p></div><div class="info-card"><div class="info-title"><span aria-hidden="true">🚌</span> 回台接駁 &middot; 11/20（五）</div><strong>國光客運 1841｜桃機 03:30</strong><p>前往松山機場 &middot; 車程約 50 分鐘<br/>車資 NT$112（依現場班次為準）。</p></div></section>
+<section aria-label="住宿資訊" class="hotel-row">
+<div>
+<div class="info-title">⌂ 旅行中的小基地</div>
+<div class="hotel-name">上野東金屋ホテル</div>
+<address>〒110-0015 東京都台東区東上野３丁目１７&minus;５ 1F</address>
+</div>
+<a class="map-link" href="https://maps.app.goo.gl/ypz6ZM2K9GZfupe3A" rel="noopener noreferrer" target="_blank">在地圖中開啟 &nearrow;</a>
+</section>
+<p class="subtle-note">行程依提供的時間與費用整理；實際班次、票價、營業時間與 Peach 線上報到開放時間，請以官方公告／票券為準。抵達上野後先劃位回程 Skyliner；11/19 請預留取行李與前往成田的時間。</p>
+<div class="day-nav-wrap">
+<nav aria-label="快速跳至每日行程" class="day-nav wrap"><a href="#day0"><span class="nav-num">前</span>11/14 出發夜</a><a href="#day1"><span class="nav-num">01</span>11/15 下町散策</a><a href="#day2"><span class="nav-num">02</span>11/16 鎌倉・橫濱</a><a href="#day3"><span class="nav-num">03</span>11/17 富士山滑雪</a><a href="#day4"><span class="nav-num">04</span>11/18 木更津購物</a><a href="#day5"><span class="nav-num">05</span>11/19 神樂坂・返程</a><a href="#day6"><span class="nav-num">回</span>11/20 平安抵達</a></nav>
+<p class="nav-hint"><span aria-hidden="true">&harr;</span> 手機上可左右滑動日期，快速跳至想去的地方</p>
+</div>
+<main id="main-content" tabindex="-1">
+<section aria-labelledby="day0-title" class="day-card bookend" id="day0">
+<aside class="art-panel rose"><svg aria-label="可愛的客運與行李插圖" class="day-art" role="img" viewbox="0 0 220 170">
+<circle cx="177" cy="34" fill="#f4d7a1" r="17"></circle><ellipse cx="109" cy="147" fill="#e9dfd1" rx="83" ry="8"></ellipse>
+<rect fill="#e7eee2" height="82" rx="14" stroke="#71866f" stroke-width="3" width="151" x="28" y="42"></rect>
+<path d="M42 55h27v28H42zm35 0h27v28H77zm35 0h27v28h-27zm35 0h16v28h-16z" fill="#fffaf1" stroke="#9bad96" stroke-width="2"></path>
+<path d="M29 94h149v19H29z" fill="#d48668"></path><path d="M42 103h25m12 0h25" stroke="#fff6ec" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="61" cy="125" fill="#5a6058" r="12"></circle><circle cx="147" cy="125" fill="#5a6058" r="12"></circle><circle cx="61" cy="125" fill="#eee9dc" r="5"></circle><circle cx="147" cy="125" fill="#eee9dc" r="5"></circle>
+<rect fill="#f5e6dc" height="39" rx="4" stroke="#bd8b70" stroke-width="2" width="21" x="184" y="91"></rect><path d="M190 91v-7a5 5 0 0 1 10 0v7" fill="none" stroke="#bd8b70" stroke-width="2"></path>
+<path d="M111 19c-7-7-17 4-8 12l8 7 8-7c9-8-1-19-8-12z" fill="#d48668"></path>
+</svg><p class="art-caption">帶著期待出發</p></aside>
+<div class="day-content">
+<div class="section-heading"><h2 id="day0-title">出發前夜・松山前往桃園</h2><div class="day-date">11 / 14 SAT &middot; PRE-TRIP</div></div>
+<p class="day-intro">正式旅行從前一晚開始。把護照、機票、行李與交通票券準備好，帶著輕鬆的心情前往機場。</p>
+<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">22:00</div><h3>松山機場｜搭乘國光客運 1841</h3></div><a aria-label="在 Google 地圖開啟：松山機場｜搭乘國光客運 1841" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%BE%E5%B1%B1%E6%A9%9F%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>前往桃園機場 T1，車程約 50 分鐘，車資 NT$112。請依現場乘車資訊確認候車位置與班次。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">23:25</div><h3>桃園機場 T1｜報到、托運行李</h3></div><a aria-label="在 Google 地圖開啟：桃園機場 T1｜報到、托運行李" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>先抵達櫃檯區、準備護照與訂位資料。Peach 桃園機場指南列出的櫃檯報到時段為起飛前 150 至 50 分鐘；若 MM620 02:25 起飛，約 23:55 才進入該時段，所以 23:25 可能還未開櫃，請以航班當日公告為準。<br/><a aria-label="查看 Peach 桃園機場官方報到資訊" class="inline-official-link" href="https://www.flypeach.com/tw/lm/ai/airports/airportguide_international/tpe" rel="noopener noreferrer" target="_blank">Peach 桃園機場官方資訊 &nearrow;</a></p><div class="stop-tags"><span class="mini-tag optional-tag">提醒｜確認櫃檯開放與報到截止時間</span></div></article></div>
+<div class="callout">♡ 夜間客運班次與航班報到時間，請再次依當日公告及訂位資料確認。</div>
+</div>
+</section><section aria-labelledby="day1-title" class="day-card" id="day1">
+<aside class="art-panel rose">
+<svg aria-label="咖啡杯、和菓子與日式街屋插畫" class="day-art" role="img" viewbox="0 0 220 190">
+<circle cx="111" cy="90" fill="#f7dccc" r="70"></circle>
+<path d="M29 146V81h31v65M35 81V66h19v15m-14 14h7m-7 13h7m-7 13h7" fill="#fff8ef" stroke="#c78b6c" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M161 146V66h31v80M168 66V53h17v13m-15 26h6m6 0h6m-18 15h6m6 0h6" fill="#f8f1df" stroke="#c78b6c" stroke-linejoin="round" stroke-width="2"></path>
+<ellipse cx="110" cy="154" fill="#e4c9b7" rx="76" ry="9"></ellipse>
+<path d="M65 91h64v47a10 10 0 0 1-10 10H75a10 10 0 0 1-10-10z" fill="#fffdf8" stroke="#aa7861" stroke-width="2.5"></path>
+<path d="M129 101h13a13 13 0 0 1 0 26h-13" fill="none" stroke="#aa7861" stroke-width="3"></path>
+<ellipse cx="97" cy="91" fill="#b27a51" rx="32" ry="8" stroke="#aa7861" stroke-width="2"></ellipse>
+<path d="M86 83q-5-9 2-14m15 14q-5-9 2-14" fill="none" stroke="#fffdf8" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M58 62q-10-9-15 2-3 8 8 15l7 5 7-6q11-9 5-16-6-7-12 0z" fill="#d48668"></path>
+<path d="M152 48l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#d6b66d"></path>
+<path d="M87 154q20-7 40 0" fill="none" stroke="#d5b9a6" stroke-width="2"></path>
+<path d="M47 158q8-13 16-1m97 0q8-13 16-1" fill="none" stroke="#829681" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<p class="art-caption">咖啡香與下町散步</p>
+</aside>
+<div class="day-content">
+<div class="section-heading"><h2 id="day1-title">東京下町散策・咖啡與老舖甜點</h2><div class="day-date">11 / 15 SUN &middot; DAY 01</div></div>
+<p class="day-intro">從清晨抵達東京開始，先放行李、吃點東西，再慢慢走訪清澄白河、人形町與戶越銀座。前一晚搭紅眼班機，請讓體力決定下午的節奏。</p>
+<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">02:25</div><h3>桃園 T1｜Peach MM620 起飛</h3></div><a aria-label="在 Google 地圖開啟：桃園 T1｜Peach MM620 起飛" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘 Peach MM620 前往東京成田機場第一航廈。</p><div class="stop-tags"><span class="mini-tag">航班 MM620</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">06:30</div><h3>抵達成田 T1｜入境與提領行李</h3></div><a aria-label="在 Google 地圖開啟：抵達成田 T1｜入境與提領行李" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%90%E7%94%B0%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>預留約 2 小時辦理入境、提領行李與前往車站。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">09:00</div><h3>搭乘 Skyliner 前往上野</h3></div><a aria-label="在 Google 地圖開啟：搭乘 Skyliner 前往上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E7%AB%99" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>抵達上野車站後，記得先為 11/19 回程前往成田的 Skyliner 劃位，並確認班次與乘車站。</p><div class="stop-tags"><span class="mini-tag">重要提醒｜先劃回程 Skyliner</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:00</div><h3>上野東金屋ホテル｜寄放行李</h3></div><a aria-label="在 Google 地圖開啟：上野東金屋ホテル｜寄放行李" class="stop-map" href="https://maps.app.goo.gl/ypz6ZM2K9GZfupe3A" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>先寄放行李，輕裝開始散步；依飯店規定確認可寄放時間。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:30</div><h3>早餐｜らーめん鴨 to 葱</h3></div><a aria-label="在 Google 地圖開啟：早餐｜らーめん鴨 to 葱" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%89%E3%83%BC%E3%82%81%E3%82%93%E9%B4%A8to%E8%91%B1%20%E4%B8%8A%E9%87%8E" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>推薦鴨肉拉麵；提供資訊為 24 小時營業，平均約 &yen;1,500。抵達後仍請確認店家公告與排隊狀況。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:00</div><h3>上野御徒町 &rarr; 清澄白河</h3></div><a aria-label="在 Google 地圖開啟：上野御徒町 &rarr; 清澄白河" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B8%85%E6%BE%84%E7%99%BD%E6%B2%B3%E7%AB%99" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車前往清澄白河，單程約 &yen;220。可隨意挑一家咖啡廳外帶咖啡，再到清澄公園散步。</p><div class="stop-tags"><span class="mini-tag">電車 &yen;220</span><span class="mini-tag">咖啡散步</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:30</div><h3>午餐｜深川釜匠</h3></div><a aria-label="在 Google 地圖開啟：午餐｜深川釜匠" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B7%B1%E5%B7%9D%E9%87%9C%E5%8C%A0%20%E6%9D%B1%E4%BA%AC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>品嚐傳統深川釜飯，提供資訊的參考價為 &yen;1,490／&yen;1,690。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">12:30</div><h3>散步至人形町｜森乃園、壽堂</h3></div><a aria-label="在 Google 地圖開啟：散步至人形町｜森乃園、壽堂" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A3%AE%E4%B9%83%E5%9C%92%20%E4%BA%BA%E5%BD%A2%E7%94%BA" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>森乃園選購香氣溫暖的焙茶；壽堂選購招牌黃金芋。兩間老舖可依當天營業情況調整順序。</p><div class="stop-tags"><span class="mini-tag">焙茶</span><span class="mini-tag">黃金芋</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">14:00</div><h3>體力補給｜回飯店休息或繼續走</h3></div><a aria-label="在 Google 地圖開啟：體力補給｜回飯店休息或繼續走" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E6%9D%B1%E9%87%91%E5%B1%8B%E3%83%9B%E3%83%86%E3%83%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>如果前一晚睡眠不足，可以先回飯店休息；若精神還不錯，再前往戶越銀座。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性｜依體力決定</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">15:00</div><h3>人形町 &rarr; 戶越｜戶越銀座商店街</h3></div><a aria-label="在 Google 地圖開啟：人形町 &rarr; 戶越｜戶越銀座商店街" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%B8%E8%B6%8A%E9%8A%80%E5%BA%A7%E5%95%86%E5%BA%97%E8%A1%97" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭電車前往戶越，單程約 &yen;272。逛逛在地長型商店街，沿路尋找飯糰、米糰子與米麵包。</p><div class="stop-tags"><span class="mini-tag">電車 &yen;272</span><span class="mini-tag">在地小吃</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">18:00</div><h3>戶越 &rarr; 人形町 &rarr; 上野</h3></div><a aria-label="在 Google 地圖開啟：戶越 &rarr; 人形町 &rarr; 上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E6%9D%B1%E9%87%91%E5%B1%8B%E3%83%9B%E3%83%86%E3%83%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>依規劃路線返回上野，交通費合計約 &yen;328。回飯店休息，再視體力決定是否外出吃晚餐。</p><div class="stop-tags"><span class="mini-tag">電車約 &yen;328</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">晚餐彈性</div><h3>天丼天ぷら まことや</h3></div><a aria-label="在 Google 地圖開啟：天丼天ぷら まことや" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A9%E4%B8%BC%E5%A4%A9%E3%81%B7%E3%82%89%20%E3%81%BE%E3%81%93%E3%81%A8%E3%82%84%20%E6%9D%B1%E4%BA%AC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>若還有體力，可考慮天丼或天婦羅，提供資訊的平均價位約 &yen;1,100&ndash;&yen;1,800。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性｜可外帶或休息</span></div></article></div>
+<div class="callout">♡ 今天步行與交通較多；如果很累，14:00 回飯店休息完全合理。回程 Skyliner 劃位務必先完成。</div>
+</div>
+</section>
+<section aria-labelledby="day2-title" class="day-card" id="day2">
+<aside class="art-panel blue">
+<svg aria-label="湘南海岸、電車與大佛的可愛插畫" class="day-art" role="img" viewbox="0 0 220 190">
+<circle cx="167" cy="42" fill="#f2d7a0" r="18"></circle>
+<path d="M18 133q28-17 55 0t55 0 55 0 22 0v29H18z" fill="#a8cbd1"></path>
+<path d="M18 146q28-15 55 0t55 0 55 0 22 0" fill="none" stroke="#78aab5" stroke-width="2.5"></path>
+<path d="M28 129l31-54 31 54" fill="#d8e1d8" stroke="#8ca18e" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M46 97l13-22 13 22" fill="#f7f4ec"></path>
+<!-- buddha -->
+<path d="M137 123q-8-16 2-26 11-11 22 0 10 10 2 26l11 15h-47z" fill="#829b91" stroke="#617b72" stroke-width="2"></path>
+<circle cx="150" cy="86" fill="#91a99e" r="16" stroke="#617b72" stroke-width="2"></circle>
+<path d="M136 83q1-14 14-14t14 14" fill="#617b72"></path>
+<path d="M143 88h3m9 0h3m-10 7q3 2 6 0" stroke="#526b63" stroke-linecap="round" stroke-width="2"></path>
+<path d="M123 138h54" stroke="#617b72" stroke-linecap="round" stroke-width="3"></path>
+<!-- train -->
+<path d="M25 122h64a8 8 0 0 1 8 8v21H17v-21a8 8 0 0 1 8-8z" fill="#f8f3e9" stroke="#6f8790" stroke-width="2"></path>
+<path d="M23 128h18v13H23zm24 0h18v13H47zm24 0h18v13H71z" fill="#9fc3cc" stroke="#6f8790" stroke-width="1.5"></path>
+<path d="M15 151h84" stroke="#6f8790" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="33" cy="153" fill="#6f8790" r="4"></circle><circle cx="81" cy="153" fill="#6f8790" r="4"></circle>
+<path d="M105 42l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#d48668"></path>
+<path d="M105 174q22-13 43 0" fill="none" stroke="#8da5a7" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<p class="art-caption">湘南海風與復古電車</p>
+</aside>
+<div class="day-content">
+<div class="section-heading"><h2 id="day2-title">鎌倉大佛・灌籃高手平交道・橫濱</h2><div class="day-date">11 / 16 MON &middot; DAY 02</div></div>
+<p class="day-intro">從鎌倉古都一路走向湘南海岸，再轉往港灣城市橫濱。交通路線較長，請以當日列車與公車時刻為準，必要時可縮短橫濱停留範圍。</p>
+<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:00</div><h3>JR 上野 &rarr; JR 藤澤</h3></div><a aria-label="在 Google 地圖開啟：JR 上野 &rarr; JR 藤澤" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=JR%E4%B8%8A%E9%87%8E%E7%AB%99" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車前往藤澤，提供的單程參考費用約 &yen;1,034。出發前確認轉乘路線與月台。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:00</div><h3>藤澤站南口 &rarr; 大佛前｜搭乘公車</h3></div><a aria-label="在 Google 地圖開啟：藤澤站南口 &rarr; 大佛前｜搭乘公車" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%97%A4%E6%B2%A2%E9%A7%85%E5%8D%97%E5%8F%A3%20%E3%83%90%E3%82%B9%E4%B9%97%E3%82%8A%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭公車前往大佛前，提供的參考費用約 &yen;360。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">抵達後</div><h3>鎌倉大佛｜高德院</h3></div><a aria-label="在 Google 地圖開啟：鎌倉大佛｜高德院" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%AB%98%E5%BE%B3%E9%99%A2%20%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BB%8F" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>參觀代表性的青銅阿彌陀如來坐像，門票參考價 &yen;300。請確認當日開放時間。</p><div class="stop-tags"><span class="mini-tag">門票約 &yen;300</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">13:00</div><h3>長谷 &rarr; 鎌倉高校前</h3></div><a aria-label="在 Google 地圖開啟：長谷 &rarr; 鎌倉高校前" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘江之電前往鎌倉高校前，提供的單程參考費用約 &yen;220。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">13:00 後</div><h3>灌籃高手平交道｜湘南海岸</h3></div><a aria-label="在 Google 地圖開啟：灌籃高手平交道｜湘南海岸" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85%20%E8%B8%8F%E5%88%87" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>在鎌倉高校前站附近欣賞經典海岸與平交道景色。請留意列車、道路與其他行人安全，不要站在軌道或車道上拍照。</p><div class="stop-tags"><span class="mini-tag">拍照請注意安全</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">13:30</div><h3>鎌倉高校前 &rarr; 江之島</h3></div><a aria-label="在 Google 地圖開啟：鎌倉高校前 &rarr; 江之島" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B1%9F%E3%83%8E%E5%B3%B6%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘江之電前往江之島一帶，提供的單程參考費用約 &yen;200。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">接續轉乘</div><h3>湘南江之島 &rarr; 大船 &rarr; 橫濱</h3></div><a aria-label="在 Google 地圖開啟：湘南江之島 &rarr; 大船 &rarr; 橫濱" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B9%98%E5%8D%97%E6%B1%9F%E3%81%AE%E5%B3%B6%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>依序搭乘湘南單軌電車至大船（約 &yen;340），再前往橫濱（約 &yen;350）。請預留找站、轉乘與等車時間。</p><div class="stop-tags"><span class="mini-tag">湘南單軌約 &yen;340</span><span class="mini-tag">大船 &rarr; 橫濱約 &yen;350</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">14:30</div><h3>橫濱午餐｜選一家喜歡的餐廳</h3></div><a aria-label="在 Google 地圖開啟：橫濱午餐｜選一家喜歡的餐廳" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A8%AA%E6%B5%9C%E9%A7%85%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>花より、ハンバーグ（漢堡，約 &yen;2,000 內）、こめらく（茶泡飯，約 &yen;1,500），或横浜焼肉kintan（燒肉，價格尚未確認）。</p><div class="stop-tags"><span class="mini-tag">餐廳依現場候位調整</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">下午至傍晚</div><h3>橫濱周圍閑晃</h3></div><a aria-label="在 Google 地圖開啟：橫濱周圍閑晃" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A8%AA%E6%B5%9C%E8%B5%A4%E3%83%AC%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>可在港未來、紅磚倉庫或海濱周邊散步購物，依午餐與抵達時間決定停留區域。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">19:00</div><h3>橫濱 &rarr; 上野</h3></div><a aria-label="在 Google 地圖開啟：橫濱 &rarr; 上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=JR%E6%A8%AA%E6%B5%9C%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車返回上野，提供的單程參考費用約 &yen;620。</p></article></div>
+<div class="callout">♡ 這天轉乘較密集，出發前先確認江之電、湘南單軌與巴士時間；各段車資是提供的估算值，請以現場票價為準。</div>
+</div>
+</section>
+<section aria-labelledby="day3-title" class="day-card" id="day3">
+<aside class="art-panel">
+<svg aria-label="富士山、雪花與滑雪者插畫" class="day-art" role="img" viewbox="0 0 220 190">
+<circle cx="164" cy="42" fill="#f1d59d" r="22"></circle>
+<path d="M18 143l66-99 62 99z" fill="#a9bba5" stroke="#748f78" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M58 83l26-39 25 40-15-8-10 11-10-9z" fill="#fffdf7" stroke="#d7e1d5" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M96 143l38-61 47 61z" fill="#d8e3d5" stroke="#8fa58d" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M121 104l13-22 17 22-11-4-6 7-6-5z" fill="#fffdf7"></path>
+<path d="M18 145h183" stroke="#8fa58d" stroke-linecap="round" stroke-width="3"></path>
+<!-- skier -->
+<circle cx="151" cy="116" fill="#f2c9ad" r="8" stroke="#b78266" stroke-width="1.5"></circle>
+<path d="M144 114q0-9 8-9t8 9" fill="#d48668"></path>
+<path d="M148 125l-8 20 19 4 4-19z" fill="#d48668" stroke="#ab7158" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M147 132l-14 8m23-6 13 8m-25 6-11 14m25-12 13 11" stroke="#6b806e" stroke-linecap="round" stroke-width="3.5"></path>
+<path d="M121 166l36-5m-20 10 36-5" stroke="#687f88" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M39 48l2 6 6 2-6 2-2 6-2-6-6-2 6-2zM192 83l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#fffdf7" stroke="#9db2b6" stroke-width="1"></path>
+<circle cx="42" cy="111" fill="#fffdf7" r="3"></circle><circle cx="185" cy="128" fill="#fffdf7" r="4"></circle><circle cx="110" cy="27" fill="#fffdf7" r="3"></circle>
+</svg>
+<p class="art-caption">雪白富士山小冒險</p>
+</aside>
+<div class="day-content">
+<div class="section-heading"><h2 id="day3-title">富士山 YETI 滑雪・新宿採購</h2><div class="day-date">11 / 17 TUE &middot; DAY 03</div></div>
+<p class="day-intro">今天早出晚歸，先以滑雪團行程為主，再安排晚餐與 Alpen TOKYO。衣物、手套與保暖配件先整理好，減少現場臨時採買的壓力。</p>
+<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">06:30</div><h3>上野御徒町 &rarr; 新宿西口</h3></div><a aria-label="在 Google 地圖開啟：上野御徒町 &rarr; 新宿西口" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E5%BE%A1%E5%BE%92%E7%94%BA%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車前往新宿西口，提供的單程參考費用約 &yen;220。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">07:20</div><h3>新宿 L 塔集合</h3></div><a aria-label="在 Google 地圖開啟：新宿 L 塔集合" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%93%E3%83%AB%20%E6%96%B0%E5%AE%BFL%E3%82%BF%E3%83%AF%E3%83%BC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>依滑雪行程安排集合，請再次確認集合樓層、報到方式及遊覽車出發時間。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:30&ndash;18:00</div><h3>富士山 YETI 滑雪場</h3></div><a aria-label="在 Google 地圖開啟：富士山 YETI 滑雪場" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%20%E3%82%A4%E3%82%A8%E3%83%86%E3%82%A3" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>體驗滑雪或雪地活動。可自備長襪與長袖；提供的裝備價格：面罩 &yen;2,500、雙板滑雪襪 &yen;2,000；護目鏡、手套、玩雪槍租借每件約 &yen;1,000。請確認各品項實際是購買或租借。</p><div class="stop-tags"><span class="mini-tag">滑雪體驗</span><span class="mini-tag">雪地活動</span><span class="mini-tag">確認租借品項及尺寸</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">19:00</div><h3>晚餐｜新宿美食</h3></div><a aria-label="在 Google 地圖開啟：晚餐｜新宿美食" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=SHOGUN%20BURGER%20%E6%96%B0%E5%AE%BF" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>可選 SHOGUN BURGER（平均約 &yen;2,000）或桜すし（約 &yen;330&ndash;&yen;910／盤）；實際價目依店內菜單。</p><div class="stop-tags"><span class="mini-tag">SHOGUN BURGER 約 &yen;2,000</span><span class="mini-tag">桜すし 約 &yen;330&ndash;&yen;910／盤</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">20:00</div><h3>Alpen TOKYO 新宿｜運動用品採購</h3></div><a aria-label="在 Google 地圖開啟：Alpen TOKYO 新宿｜運動用品採購" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=Alpen%20TOKYO%20%E6%96%B0%E5%AE%BF" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>逛運動用品、戶外裝備與服飾。滑雪回程若延誤，可縮短購物時間，優先購買清單上的必需品。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性｜視回程時間調整</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">22:00</div><h3>新宿西口 &rarr; 上野御徒町</h3></div><a aria-label="在 Google 地圖開啟：新宿西口 &rarr; 上野御徒町" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E8%A5%BF%E5%8F%A3%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車返回上野，提供的單程參考費用約 &yen;220。</p></article></div>
+<div class="callout">♡ 雪場營運、雪況、團體集合及交通依訂購憑證與官方公告為準；租借品項和費用請現場再次確認。</div>
+</div>
+</section>
+<section aria-labelledby="day4-title" class="day-card" id="day4">
+<aside class="art-panel gold">
+<svg aria-label="紅磚車站與購物袋插畫" class="day-art" role="img" viewbox="0 0 220 190">
+<circle cx="177" cy="39" fill="#f4d7a1" r="20"></circle>
+<path d="M21 143V70l89-35 89 35v73z" fill="#c98366" stroke="#a86852" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M15 72l95-40 95 40" fill="none" stroke="#a86852" stroke-linecap="round" stroke-width="4"></path>
+<path d="M33 83h22v26H33zm37 0h22v26H70zm56 0h22v26h-22zm37 0h22v26h-22z" fill="#f6e9d7" stroke="#a86852" stroke-width="2"></path>
+<path d="M92 143v-25a18 18 0 0 1 36 0v25z" fill="#f3dfbd" stroke="#a86852" stroke-width="2"></path>
+<path d="M21 144h178" stroke="#a86852" stroke-linecap="round" stroke-width="3"></path>
+<!-- shopping bags -->
+<path d="M44 132h34l-3 39H47z" fill="#fffaf0" stroke="#6f846e" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M53 132v-8a8 8 0 0 1 16 0v8" fill="none" stroke="#6f846e" stroke-width="2"></path>
+<path d="M141 132h32l-3 39h-26z" fill="#e6eee1" stroke="#6f846e" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M148 132v-8a8 8 0 0 1 16 0v8" fill="none" stroke="#6f846e" stroke-width="2"></path>
+<path d="M55 148h11m-8 6h7m82-5h13m-11 7h10" stroke="#d48668" stroke-linecap="round" stroke-width="2"></path>
+<path d="M105 15l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#fff8eb"></path>
+</svg>
+<p class="art-caption">買到喜歡的小東西</p>
+</aside>
+<div class="day-content">
+<div class="section-heading"><h2 id="day4-title">木更津 Outlet・東京車站購物</h2><div class="day-date">11 / 18 WED &middot; DAY 04</div></div>
+<p class="day-intro">上午出發前往木更津 Outlet，下午回到東京站一帶吃晚餐、散步與採買。回飯店後留時間整理行李，為隔天晚班機做準備。</p>
+<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:00</div><h3>上野 &rarr; 京橋</h3></div><a aria-label="在 Google 地圖開啟：上野 &rarr; 京橋" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E6%A9%8B%E9%A7%85%20%E6%9D%B1%E4%BA%AC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車往京橋，提供的單程參考費用約 &yen;178，再前往東京站八重洲口巴士乘車處。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">10:30</div><h3>東京站八重洲口 &rarr; 三井 Outlet Park 木更津</h3></div><a aria-label="在 Google 地圖開啟：東京站八重洲口 &rarr; 三井 Outlet Park 木更津" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%E6%9D%B1%E4%BA%AC%E5%85%AB%E9%87%8D%E6%B4%B2" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘高速巴士前往木更津，提供的單程參考車資約 &yen;1,500。建議提早到站並確認乘車月台、是否需預約。</p><div class="stop-tags"><span class="mini-tag">高速巴士約 &yen;1,500</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:00&ndash;15:00</div><h3>三井 Outlet Park 木更津</h3></div><a aria-label="在 Google 地圖開啟：三井 Outlet Park 木更津" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%89%E4%BA%95%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88%E3%83%91%E3%83%BC%E3%82%AF%20%E6%9C%A8%E6%9B%B4%E6%B4%A5" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>安排四小時購物時間，先逛必買品牌，再留時間用餐、試穿與結帳。</p><div class="stop-tags"><span class="mini-tag">Outlet 購物</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">15:00</div><h3>木更津 Outlet &rarr; 東京站八重洲口</h3></div><a aria-label="在 Google 地圖開啟：木更津 Outlet &rarr; 東京站八重洲口" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%89%E4%BA%95%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88%E3%83%91%E3%83%BC%E3%82%AF%20%E6%9C%A8%E6%9B%B4%E6%B4%A5%20%E3%83%90%E3%82%B9%E4%B9%97%E3%82%8A%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘高速巴士返回東京，提供的單程參考車資約 &yen;1,500。請預留交通延誤時間。</p><div class="stop-tags"><span class="mini-tag">高速巴士約 &yen;1,500</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">16:00</div><h3>晚餐｜東京站周邊</h3></div><a aria-label="在 Google 地圖開啟：晚餐｜東京站周邊" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%A8%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B5%E3%82%A6%E3%82%B9%20%E5%85%AB%E9%87%8D%E6%B4%B2" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>可考慮エリックサウス（印度料理，平均約 &yen;1,500）或札幌ドミニカ（日式咖哩，平均約 &yen;1,500）。</p><div class="stop-tags"><span class="mini-tag">依排隊情況選擇</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">17:00</div><h3>東京車站周圍閑晃</h3></div><a aria-label="在 Google 地圖開啟：東京車站周圍閑晃" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E9%A7%85%E4%B8%80%E7%95%AA%E8%A1%97" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>欣賞丸之內紅磚車站，或逛東京車站一番街，尋找動漫周邊與東京伴手禮。</p><div class="stop-tags"><span class="mini-tag">紅磚車站</span><span class="mini-tag">動漫周邊・伴手禮</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">20:00</div><h3>京橋 &rarr; 上野</h3></div><a aria-label="在 Google 地圖開啟：京橋 &rarr; 上野" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E6%A9%8B%E9%A7%85%20%E6%9D%B1%E4%BA%AC" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車返回上野，提供的單程參考費用約 &yen;178。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">回飯店後</div><h3>整理行李｜分配重量</h3></div><a aria-label="在 Google 地圖開啟：整理行李｜分配重量" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E6%9D%B1%E9%87%91%E5%B1%8B%E3%83%9B%E3%83%86%E3%83%AB" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>先整理購物戰利品與托運行李，檢查重量及隨身行李規定，護照、充電器與重要文件分開收好。</p><div class="stop-tags"><span class="mini-tag">行李重量檢查</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">22:05</div><h3>確認回程報到方式</h3></div></div><p>原訂在起飛前一天 22:05 檢查報到。Peach 官網目前列明 App 自動報到不適用國際航班，請先確認 MM627 可用的報到方式與開放時間，不要預設一定能線上辦理。 <a aria-label="查看 Peach 官方報到說明" class="inline-official-link" href="https://www.flypeach.com/en/lm/ai/airports/how_to_checkin" rel="noopener noreferrer" target="_blank">Peach 官方報到說明 &nearrow;</a></p><div class="stop-tags"><span class="mini-tag optional-tag">提醒｜實際開放時間依官方規定</span></div></article></div>
+<div class="callout">♡ 往返木更津的高速巴士建議預先確認班次與預約規則；22:05 是你的報到提醒時間，是否能線上報到以 Peach 當日規定為準。</div>
+</div>
+</section>
+<section aria-labelledby="day5-title" class="day-card" id="day5">
+<aside class="art-panel lilac">
+<svg aria-label="日式神社、石板小巷與愛心插畫" class="day-art" role="img" viewbox="0 0 220 190">
+<circle cx="164" cy="41" fill="#f2d6a4" r="20"></circle>
+<path d="M25 147V88h170v59" fill="#f7f1e7" stroke="#aa9eaf" stroke-width="2"></path>
+<path d="M16 91h188l-20-15H36z" fill="#d48668" stroke="#a86f58" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M37 75h146M49 69h122" stroke="#a86f58" stroke-linecap="round" stroke-width="3"></path>
+<path d="M40 91v57m140-57v57" stroke="#aa9eaf" stroke-linecap="round" stroke-width="6"></path>
+<path d="M86 147v-27a24 24 0 0 1 48 0v27" fill="#e5e1eb" stroke="#aa9eaf" stroke-width="2"></path>
+<path d="M93 124h34m-28-7h22" stroke="#aa9eaf" stroke-width="2"></path>
+<path d="M19 161l42-10 23 10 30-9 31 9 35-11 22 11" fill="none" stroke="#aa9eaf" stroke-linecap="round" stroke-width="2"></path>
+<path d="M67 171l10-12 10 12m24 0 10-12 10 12m22 0 10-12 10 12" fill="none" stroke="#c6bdcf" stroke-linecap="round" stroke-width="2"></path>
+<path d="M77 44c-8-8-19 4-9 13l9 8 9-8c10-9-1-21-9-13z" fill="#d48668"></path>
+<path d="M139 57l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#9cae9a"></path>
+</svg>
+<p class="art-caption">巷弄裡的日式慢時光</p>
+</aside>
+<div class="day-content">
+<div class="section-heading"><h2 id="day5-title">神樂坂・赤城神社・搭機返台</h2><div class="day-date">11 / 19 THU &middot; DAY 05</div></div>
+<p class="day-intro">上午退房後先吃午餐，接著用半天散步與咖啡時光收尾；下午回上野取行李，再搭 Skyliner 前往成田，晚上搭機返台。</p>
+<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:00</div><h3>上野東金屋ホテル｜退房</h3></div><a aria-label="在 Google 地圖開啟：上野東金屋ホテル｜退房" class="stop-map" href="https://maps.app.goo.gl/ypz6ZM2K9GZfupe3A" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>確認房卡、帳單與行李寄放方式，退房後輕裝出門。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">11:30</div><h3>午餐｜とんかつ山家</h3></div><a aria-label="在 Google 地圖開啟：午餐｜とんかつ山家" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%E5%B1%B1%E5%AE%B6%20%E4%B8%8A%E9%87%8E" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>享用炸豬排，提供的平均價位約 &yen;1,500；熱門時段可能需要排隊。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">中午</div><h3>飯店附近散步或自由加點</h3></div><a aria-label="在 Google 地圖開啟：飯店附近散步或自由加點" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E9%A7%85%20%E5%91%A8%E8%BE%BA" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>如果想留在上野，可在飯店附近輕鬆逛逛；若精神和時間充裕，再考慮其他區域，避免拉太遠。</p><div class="stop-tags"><span class="mini-tag optional-tag">彈性｜以行李與時間為優先</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">12:30</div><h3>上野御徒町 &rarr; 飯田橋</h3></div><a aria-label="在 Google 地圖開啟：上野御徒町 &rarr; 飯田橋" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%A3%AF%E7%94%B0%E6%A9%8B%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘電車前往飯田橋，提供的單程參考費用約 &yen;178。</p></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">下午</div><h3>赤城神社｜找間咖啡廳坐坐</h3></div><a aria-label="在 Google 地圖開啟：赤城神社｜找間咖啡廳坐坐" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%B5%A4%E5%9F%8E%E7%A5%9E%E7%A4%BE%20%E7%A5%9E%E6%A5%BD%E5%9D%82" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>參拜赤城神社，感受傳統信仰與現代建築交會的清爽氛圍；附近找咖啡廳休息，為回程保留體力。</p><div class="stop-tags"><span class="mini-tag">咖啡休息</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">15:00</div><h3>飯田橋 &rarr; 上野御徒町</h3></div><a aria-label="在 Google 地圖開啟：飯田橋 &rarr; 上野御徒町" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E5%BE%A1%E5%BE%92%E7%94%BA%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭電車返回上野，提供的單程參考費用約 &yen;178。回飯店拿行李，確認所有物品與購物戰利品。</p><div class="stop-tags"><span class="mini-tag">行李領取</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">17:00</div><h3>搭乘 Skyliner｜上野 &rarr; 成田機場</h3></div><a aria-label="在 Google 地圖開啟：搭乘 Skyliner｜上野 &rarr; 成田機場" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E7%AB%99" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>前往成田機場 T1。請以已劃位的車次為準，並預留從車站到航廈、航空公司櫃檯與安檢的時間。</p><div class="stop-tags"><span class="mini-tag">重要｜確認已預約車次</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">22:05</div><h3>成田 T1｜Peach MM627 起飛</h3></div><a aria-label="在 Google 地圖開啟：成田 T1｜Peach MM627 起飛" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%90%E7%94%B0%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>搭乘 Peach MM627 返回桃園 T1。登機門、報到與行李規則依航班資訊及現場公告為準。</p><div class="stop-tags"><span class="mini-tag">航班 MM627</span></div></article></div>
+<div class="callout">♡ 17:00 的 Skyliner 是行程規劃時間，請務必確認已劃位的實際發車時間；若需要更早抵達機場，請相應提前離開市區。</div>
+</div>
+</section><section aria-labelledby="day6-title" class="day-card bookend" id="day6">
+<aside class="art-panel blue"><svg aria-label="小飛機、雲朵與家的插畫" class="day-art" role="img" viewbox="0 0 220 170">
+<circle cx="178" cy="35" fill="#f4d7a1" r="18"></circle><path d="M19 42q12-15 24 0 13-15 25 0" fill="none" stroke="#a2b7bd" stroke-linecap="round" stroke-width="3"></path><path d="M150 61q10-12 20 0 10-12 20 0" fill="none" stroke="#a2b7bd" stroke-linecap="round" stroke-width="3"></path>
+<path d="M43 111l42-15 46-40q7-5 10 2l-24 43 40 4q8 1 6 8l-50 5-19 27q-4 5-8 0l5-27-42 4q-10 0-6-11z" fill="#fffaf1" stroke="#718b94" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M63 111l29-3m24-23l-12 20" stroke="#d48668" stroke-linecap="round" stroke-width="3"></path>
+<path d="M39 148v-28l31-22 31 22v28z" fill="#e4ece0" stroke="#71866f" stroke-linejoin="round" stroke-width="2.5"></path><path d="M31 121l39-29 39 29" fill="none" stroke="#71866f" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path><rect fill="#fffaf1" height="21" rx="2" stroke="#71866f" stroke-width="2" width="17" x="62" y="127"></rect>
+<path d="M160 120c-7-7-17 4-8 12l8 7 8-7c9-8-1-19-8-12z" fill="#d48668"></path><path d="M177 91l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#d6b66d"></path>
+</svg><p class="art-caption">平安回家，把回憶帶回來</p></aside>
+<div class="day-content">
+<div class="section-heading"><h2 id="day6-title">回到台灣・旅程的甜甜收尾</h2><div class="day-date">11 / 20 FRI &middot; HOME</div></div>
+<p class="day-intro">夜班機抵達桃園後，還有最後一段回家的路。先領好行李，再確認客運乘車處，平安把這趟一週年回憶帶回家。</p>
+<div class="timeline"><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">01:25</div><h3>抵達桃園機場 T1</h3></div><a aria-label="在 Google 地圖開啟：抵達桃園機場 T1" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>Peach MM627 抵達桃園第一航廈，辦理入境、領取行李。</p><div class="stop-tags"><span class="mini-tag">跨日抵達</span></div></article><article class="stop"><div class="stop-heading"><div class="stop-main"><div class="stop-time">03:30</div><h3>桃園機場｜搭乘國光客運 1841 回松山</h3></div><a aria-label="在 Google 地圖開啟：桃園機場｜搭乘國光客運 1841 回松山" class="stop-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖 &nearrow;</a></div><p>車程約 50 分鐘，車資 NT$112。請確認凌晨營運班次、乘車位置及是否需要預先購票。</p><div class="stop-tags"><span class="mini-tag">回家接駁</span></div></article></div>
+<div class="callout">♡ 凌晨客運班次請務必出發前再次確認；旅途辛苦，返家後好好休息。</div>
+</div>
+</section>
+<div class="preflight"><div aria-hidden="true" class="preflight-icon">♡</div><div><h3>出發前最後確認</h3><p>護照與航班資料、回程 Skyliner 劃位、木更津往返巴士、YETI 雪場營運與裝備、行李重量，以及 Peach 線上報到開放時間。班次、費用與營業資訊請以官方最新公告為準。</p></div></div>
+<div class="flight-back"><div><h3>回家啦｜Peach MM627</h3><p>11/19（四）22:05 成田 T1 起飛，11/20（五）01:25 抵達桃園 T1；03:30 預計搭乘國光客運 1841 回松山。</p></div><div class="flight-time">東京 &rarr; 台灣<br/><span style="font-weight:500">把回憶帶回家 ♡</span></div></div>
+</main>
+<footer class="footer">
+<span aria-hidden="true" class="tiny-heart">&hearts;</span>
+<div>願每一次牽手，都像第一次一樣心動。</div>
+<div>OUR LITTLE ANNIVERSARY TRIP &middot; NOVEMBER 14&ndash;20, 2026</div>
+<a class="back-top" href="#top">回到手帳封面 &uarr;</a>
+</footer>
 </div>
 <script>
   (() => {
