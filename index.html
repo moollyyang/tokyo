@@ -31,7 +31,7 @@ h1 span{color:var(--terracotta);display:block}
 .hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:23px}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--sage-pale);color:#526957;font-size:.8rem;font-weight:700}
 .pill.peach{background:var(--terracotta-pale);color:#9c5e48}
-.hero-art{width:100%;max-width:400px;justify-self:end}
+.hero-art{width:100%;max-width:400px;aspect-ratio:380/300;object-fit:cover;border-radius:18px;display:block;justify-self:end}
 .heart-note{position:absolute;top:25px;right:32px;color:#d8b5a1;font-size:22px;transform:rotate(12deg)}
 .section-label{margin:42px 0 15px;display:flex;align-items:center;gap:12px;font-size:.8rem;font-weight:800;letter-spacing:.14em;color:var(--sage)}
 .section-label:after{content:"";height:1px;background:var(--line);flex:1}
@@ -60,7 +60,7 @@ h1 span{color:var(--terracotta);display:block}
 .day-card.bookend .art-panel{min-height:190px}.day-card.bookend .day-intro{max-width:none}
 .art-panel{align-self:start;position:sticky;top:92px;background:var(--sage-pale);border-radius:20px;padding:18px 15px 16px;min-height:245px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:hidden}
 .art-panel.rose{background:#f5e7de}.art-panel.blue{background:#e6edf0}.art-panel.gold{background:#f2ead6}.art-panel.lilac{background:#ece8f0}
-.day-art{width:100%;max-width:220px;height:auto;display:block}
+.day-art{width:100%;max-width:220px;aspect-ratio:220/190;object-fit:cover;border-radius:14px;display:block}.day-art.wide{aspect-ratio:220/170}
 .art-caption{font-family:"Iowan Old Style","Noto Serif TC",serif;font-size:1rem;color:#5d6d5d;margin:8px 0 0;font-weight:700}
 .art-panel.rose .art-caption{color:#96644f}.art-panel.blue .art-caption{color:#5b7380}.art-panel.gold .art-caption{color:#927641}.art-panel.lilac .art-caption{color:#786d88}
 .day-content{min-width:0}.day-intro{color:#727b73;font-size:.91rem;margin:0 0 19px;max-width:660px}
@@ -106,6 +106,14 @@ h1 span{color:var(--terracotta);display:block}
 </style>
 </head>
 <body>
+<!--
+  圖片替換方法（不用建立圖片資料夾）：
+  1. 搜尋「圖片替換」可找到每個圖片位置。
+  2. 只替換下一個 img 標籤的 src="..." 內容，改成可公開讀取的 HTTPS 圖片直連網址，例如：
+     src="https://你的圖片網站/圖片檔名.jpg"
+  3. 圖片可用 JPG、PNG 或 WebP；不要貼 Google Drive/相簿的分享頁網址，請使用圖片本身的直連網址。
+  4. 目前 src 內嵌了原本的 SVG 插圖作為預設畫面；換掉 src 後即會顯示你的圖片。
+-->
 <a class="skip-link" href="#main-content">跳至主要行程</a>
 <div aria-label="頁面閱讀進度" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="reading-progress" id="reading-progress" role="progressbar"><span id="reading-progress-bar"></span></div>
 <div class="wrap" id="top">
@@ -124,30 +132,8 @@ h1 span{color:var(--terracotta);display:block}
 <span class="pill peach">♡ 一週年紀念旅行</span>
 </div>
 </div>
-<svg aria-label="兩位旅人、東京街景與小愛心的溫柔插畫" class="hero-art" role="img" viewbox="0 0 380 300">
-<ellipse cx="190" cy="268" fill="#eee7d8" rx="145" ry="13"></ellipse>
-<circle cx="277" cy="63" fill="#f3dfce" r="32"></circle>
-<path d="M36 221V132h54v89M49 132v-22h29v22M48 154h11m11 0h11m-33 18h11m11 0h11m-33 18h11m11 0h11" fill="#dce5d6" stroke="#92a58f" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M286 224V117h42v107M297 117V99h20v18m-19 20h8m7 0h8m-23 17h8m7 0h8m-23 17h8m7 0h8" fill="#ead4c4" stroke="#c68f74" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M115 249l24-95 24 95" fill="#aebda8" stroke="#738b75" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M128 208h22m-27 19h32" stroke="#738b75" stroke-linecap="round" stroke-width="2"></path>
-<path d="M165 232l25-75 25 75" fill="#cad7c0" stroke="#829681" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M178 195h24m-30 18h36" stroke="#829681" stroke-linecap="round" stroke-width="2"></path>
-<path d="M90 245h208" stroke="#879982" stroke-linecap="round" stroke-width="2"></path>
-<!-- little couple -->
-<path d="M143 213c-1-22 4-37 18-40 15-2 22 12 20 33l-2 30h-35z" fill="#d58b6b" stroke="#a96c53" stroke-width="2"></path>
-<circle cx="160" cy="163" fill="#f0c8a9" r="17" stroke="#bd8c70" stroke-width="2"></circle>
-<path d="M143 165c-4-18 8-29 21-26 10 1 16 8 15 19l-8-7-10 2-10-4z" fill="#5b4b42"></path>
-<path d="M177 202l18 20m-37 12l-8 21m30-20l10 20" fill="none" stroke="#a96c53" stroke-linecap="round" stroke-width="7"></path>
-<path d="M192 214c0-15 9-23 19-23 12 0 19 10 17 25l-3 19h-32z" fill="#78907c" stroke="#536e5a" stroke-width="2"></path>
-<circle cx="210" cy="166" fill="#f4cfb3" r="17" stroke="#bd8c70" stroke-width="2"></circle>
-<path d="M193 164c0-15 9-24 21-23 13 1 17 13 14 23l-6-7-12 1-8-5z" fill="#5a4942"></path>
-<path d="M197 204l-13 17m32 17l-1 20m9-19l13 18" fill="none" stroke="#536e5a" stroke-linecap="round" stroke-width="7"></path>
-<path d="M167 184q14 11 27 0" fill="none" stroke="#c48165" stroke-linecap="round" stroke-width="2.5"></path>
-<path d="M235 103c-9-9-22 4-10 14l10 9 10-9c12-10-1-23-10-14z" fill="#d48668" opacity=".9"></path>
-<path d="M74 78l3 8 8 3-8 3-3 8-3-8-8-3 8-3zM324 180l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#d6b66d"></path>
-<path d="M238 247q15-18 28-2" fill="none" stroke="#8da08a" stroke-linecap="round" stroke-width="2"></path>
-</svg>
+<!-- 圖片替換｜封面主視覺｜東京街景與情侶：只替換下一行 img 的 src 值，改成可公開讀取的 HTTPS 圖片直連網址；保留 alt 與 class。 -->
+<img class="hero-art" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5pPRDJaHv3dN26wmdgEuc3QGy8R3Z89hO4L3cZG1miXggzSBWI3vxkVLCPgOjJ57MQ6-gmTj1-fmLsehRYXG97HHIbBb__U03tmwFVEyg-K11vaclHnyb2z7apkB_kEWhSiisrXvLpNBJ9ARox9ZQszp2nxNaOB7pKhjy6d4E4kkaDfW4JtL84kKVgMA/s1409/1.png" alt="兩位旅人、東京街景與小愛心的溫柔插畫" loading="eager" fetchpriority="high" />
 </header>
 <div class="section-label">出發資訊 / TRAVEL DETAILS</div>
 <section aria-label="航班與交通資訊" class="travel-grid"><div class="info-card"><div class="info-title"><span aria-hidden="true">🚌</span> 出發前夜 · 11/14（六）</div><strong>國光客運 1841｜松山機場 22:00</strong><p>車程約 50 分鐘 · 車資 NT$112<br/>23:25 抵達桃園 T1、準備報到；櫃檯開放時間請依 Peach 公告確認。</p></div><div class="info-card"><div class="info-title"><span aria-hidden="true">✈</span> 去程 · Peach MM620</div><strong>11/15（日）02:25 → 06:30</strong><p>桃園機場 T1 出發<br/>成田機場 T1 抵達。</p></div><div class="info-card"><div class="info-title"><span aria-hidden="true">✈</span> 回程 · Peach MM627</div><strong>11/19（四）22:05 → 01:25</strong><p>成田機場 T1 出發<br/>11/20（五）凌晨抵達桃園 T1。</p></div><div class="info-card"><div class="info-title"><span aria-hidden="true">🚌</span> 回台接駁 · 11/20（五）</div><strong>國光客運 1841｜桃機 03:30</strong><p>前往松山機場 · 車程約 50 分鐘<br/>車資 NT$112（依現場班次為準）。</p></div></section>
@@ -166,15 +152,8 @@ h1 span{color:var(--terracotta);display:block}
 </div>
 <main id="main-content" tabindex="-1">
 <section aria-labelledby="day0-title" class="day-card bookend" id="day0">
-<aside class="art-panel rose"><svg aria-label="可愛的客運與行李插圖" class="day-art" role="img" viewbox="0 0 220 170">
-<circle cx="177" cy="34" fill="#f4d7a1" r="17"></circle><ellipse cx="109" cy="147" fill="#e9dfd1" rx="83" ry="8"></ellipse>
-<rect fill="#e7eee2" height="82" rx="14" stroke="#71866f" stroke-width="3" width="151" x="28" y="42"></rect>
-<path d="M42 55h27v28H42zm35 0h27v28H77zm35 0h27v28h-27zm35 0h16v28h-16z" fill="#fffaf1" stroke="#9bad96" stroke-width="2"></path>
-<path d="M29 94h149v19H29z" fill="#d48668"></path><path d="M42 103h25m12 0h25" stroke="#fff6ec" stroke-linecap="round" stroke-width="3"></path>
-<circle cx="61" cy="125" fill="#5a6058" r="12"></circle><circle cx="147" cy="125" fill="#5a6058" r="12"></circle><circle cx="61" cy="125" fill="#eee9dc" r="5"></circle><circle cx="147" cy="125" fill="#eee9dc" r="5"></circle>
-<rect fill="#f5e6dc" height="39" rx="4" stroke="#bd8b70" stroke-width="2" width="21" x="184" y="91"></rect><path d="M190 91v-7a5 5 0 0 1 10 0v7" fill="none" stroke="#bd8b70" stroke-width="2"></path>
-<path d="M111 19c-7-7-17 4-8 12l8 7 8-7c9-8-1-19-8-12z" fill="#d48668"></path>
-</svg></aside>
+<aside class="art-panel rose"><!-- 圖片替換｜出發夜｜客運與行李：只替換下一行 img 的 src 值，改成可公開讀取的 HTTPS 圖片直連網址；保留 alt 與 class。 -->
+<img class="day-art wide" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVskuH8reWKu9Tpu6yuUIlI2Ds7565DL_NVqdXuCkEhDlH6mh77CogIWAMdUwos6GnHN5AB8WIBvNWsYuO8aX10ME6aVsC3LLuw-2g0hhhRWUs9YpNeUSNQEO_Njd0EhJHhhTxZopb2CQAZFQ6ES9EAtvJt18ZPrbDV0ENXVqKUdClRfOMtH3EzlpKZSg/s1410/2.png" alt="可愛的客運與行李插圖" loading="lazy" /></aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day0-title">出發前夜・松山前往桃園</h2><div class="day-date">11 / 14 SAT · PRE-TRIP</div></div>
 <p class="day-intro">正式旅行從前一晚開始。把護照、機票、行李與交通票券準備好，帶著輕鬆的心情前往機場。</p>
@@ -183,20 +162,8 @@ h1 span{color:var(--terracotta);display:block}
 </div>
 </section><section aria-labelledby="day1-title" class="day-card" id="day1">
 <aside class="art-panel rose">
-<svg aria-label="咖啡杯、和菓子與日式街屋插畫" class="day-art" role="img" viewbox="0 0 220 190">
-<circle cx="111" cy="90" fill="#f7dccc" r="70"></circle>
-<path d="M29 146V81h31v65M35 81V66h19v15m-14 14h7m-7 13h7m-7 13h7" fill="#fff8ef" stroke="#c78b6c" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M161 146V66h31v80M168 66V53h17v13m-15 26h6m6 0h6m-18 15h6m6 0h6" fill="#f8f1df" stroke="#c78b6c" stroke-linejoin="round" stroke-width="2"></path>
-<ellipse cx="110" cy="154" fill="#e4c9b7" rx="76" ry="9"></ellipse>
-<path d="M65 91h64v47a10 10 0 0 1-10 10H75a10 10 0 0 1-10-10z" fill="#fffdf8" stroke="#aa7861" stroke-width="2.5"></path>
-<path d="M129 101h13a13 13 0 0 1 0 26h-13" fill="none" stroke="#aa7861" stroke-width="3"></path>
-<ellipse cx="97" cy="91" fill="#b27a51" rx="32" ry="8" stroke="#aa7861" stroke-width="2"></ellipse>
-<path d="M86 83q-5-9 2-14m15 14q-5-9 2-14" fill="none" stroke="#fffdf8" stroke-linecap="round" stroke-width="2.5"></path>
-<path d="M58 62q-10-9-15 2-3 8 8 15l7 5 7-6q11-9 5-16-6-7-12 0z" fill="#d48668"></path>
-<path d="M152 48l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#d6b66d"></path>
-<path d="M87 154q20-7 40 0" fill="none" stroke="#d5b9a6" stroke-width="2"></path>
-<path d="M47 158q8-13 16-1m97 0q8-13 16-1" fill="none" stroke="#829681" stroke-linecap="round" stroke-width="2"></path>
-</svg>
+<!-- 圖片替換｜Day 1｜咖啡、和菓子與日式街屋：只替換下一行 img 的 src 值，改成可公開讀取的 HTTPS 圖片直連網址；保留 alt 與 class。 -->
+<img class="day-art" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBU9p2D_82AWql4_ZUfGcTbo3RO-4Da64-KXhHyHR2s3mOz1GMrL3iYsolGb1D2UiBfM5y3MVF1TyW5Z9QBTfhDfWbg4hLnlVUmpCiIHsOoLHYPEwuzarofXmV6zfiIuDUaDBzeSbnPdzHqPN5eK9EnOMxiJ3xBZqkpsirmMuqtfJ7qbG2x4gBev3Hj40/s1349/3.png" alt="咖啡杯、和菓子與日式街屋插畫" loading="lazy" />
 </aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day1-title">東京下町散策・咖啡與老舖甜點</h2><div class="day-date">11 / 15 SUN · DAY 01</div></div>
@@ -207,26 +174,8 @@ h1 span{color:var(--terracotta);display:block}
 </section>
 <section aria-labelledby="day2-title" class="day-card" id="day2">
 <aside class="art-panel blue">
-<svg aria-label="湘南海岸、電車與大佛的可愛插畫" class="day-art" role="img" viewbox="0 0 220 190">
-<circle cx="167" cy="42" fill="#f2d7a0" r="18"></circle>
-<path d="M18 133q28-17 55 0t55 0 55 0 22 0v29H18z" fill="#a8cbd1"></path>
-<path d="M18 146q28-15 55 0t55 0 55 0 22 0" fill="none" stroke="#78aab5" stroke-width="2.5"></path>
-<path d="M28 129l31-54 31 54" fill="#d8e1d8" stroke="#8ca18e" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M46 97l13-22 13 22" fill="#f7f4ec"></path>
-<!-- buddha -->
-<path d="M137 123q-8-16 2-26 11-11 22 0 10 10 2 26l11 15h-47z" fill="#829b91" stroke="#617b72" stroke-width="2"></path>
-<circle cx="150" cy="86" fill="#91a99e" r="16" stroke="#617b72" stroke-width="2"></circle>
-<path d="M136 83q1-14 14-14t14 14" fill="#617b72"></path>
-<path d="M143 88h3m9 0h3m-10 7q3 2 6 0" stroke="#526b63" stroke-linecap="round" stroke-width="2"></path>
-<path d="M123 138h54" stroke="#617b72" stroke-linecap="round" stroke-width="3"></path>
-<!-- train -->
-<path d="M25 122h64a8 8 0 0 1 8 8v21H17v-21a8 8 0 0 1 8-8z" fill="#f8f3e9" stroke="#6f8790" stroke-width="2"></path>
-<path d="M23 128h18v13H23zm24 0h18v13H47zm24 0h18v13H71z" fill="#9fc3cc" stroke="#6f8790" stroke-width="1.5"></path>
-<path d="M15 151h84" stroke="#6f8790" stroke-linecap="round" stroke-width="3"></path>
-<circle cx="33" cy="153" fill="#6f8790" r="4"></circle><circle cx="81" cy="153" fill="#6f8790" r="4"></circle>
-<path d="M105 42l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#d48668"></path>
-<path d="M105 174q22-13 43 0" fill="none" stroke="#8da5a7" stroke-linecap="round" stroke-width="2"></path>
-</svg>
+<!-- 圖片替換｜Day 2｜湘南海岸、電車與大佛：只替換下一行 img 的 src 值，改成可公開讀取的 HTTPS 圖片直連網址；保留 alt 與 class。 -->
+<img class="day-art" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZICmXhpozowsRf0bO8rgEiCRiYng1jAE7QZj-rUTOJCfBRPcE7NZ1Q5xRpwtXz47M7wpFDn90PZHNIUBiIaJklMrvwC9KQtC3XtT4LX_M7uWghrJp_RimusGacXaoKylF-Z6L16yAz3QlcQSGY8zE3_PKV0KlvmsQi3s_vcq8VH5xYnk8Zw1YaSeOIN8/s1349/4.png" alt="湘南海岸、電車與大佛的可愛插畫" loading="lazy" />
 </aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day2-title">鎌倉大佛・灌籃高手平交道・橫濱</h2><div class="day-date">11 / 16 MON · DAY 02</div></div>
@@ -237,22 +186,8 @@ h1 span{color:var(--terracotta);display:block}
 </section>
 <section aria-labelledby="day3-title" class="day-card" id="day3">
 <aside class="art-panel">
-<svg aria-label="富士山、雪花與滑雪者插畫" class="day-art" role="img" viewbox="0 0 220 190">
-<circle cx="164" cy="42" fill="#f1d59d" r="22"></circle>
-<path d="M18 143l66-99 62 99z" fill="#a9bba5" stroke="#748f78" stroke-linejoin="round" stroke-width="2.5"></path>
-<path d="M58 83l26-39 25 40-15-8-10 11-10-9z" fill="#fffdf7" stroke="#d7e1d5" stroke-linejoin="round" stroke-width="1.5"></path>
-<path d="M96 143l38-61 47 61z" fill="#d8e3d5" stroke="#8fa58d" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M121 104l13-22 17 22-11-4-6 7-6-5z" fill="#fffdf7"></path>
-<path d="M18 145h183" stroke="#8fa58d" stroke-linecap="round" stroke-width="3"></path>
-<!-- skier -->
-<circle cx="151" cy="116" fill="#f2c9ad" r="8" stroke="#b78266" stroke-width="1.5"></circle>
-<path d="M144 114q0-9 8-9t8 9" fill="#d48668"></path>
-<path d="M148 125l-8 20 19 4 4-19z" fill="#d48668" stroke="#ab7158" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M147 132l-14 8m23-6 13 8m-25 6-11 14m25-12 13 11" stroke="#6b806e" stroke-linecap="round" stroke-width="3.5"></path>
-<path d="M121 166l36-5m-20 10 36-5" stroke="#687f88" stroke-linecap="round" stroke-width="2.5"></path>
-<path d="M39 48l2 6 6 2-6 2-2 6-2-6-6-2 6-2zM192 83l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#fffdf7" stroke="#9db2b6" stroke-width="1"></path>
-<circle cx="42" cy="111" fill="#fffdf7" r="3"></circle><circle cx="185" cy="128" fill="#fffdf7" r="4"></circle><circle cx="110" cy="27" fill="#fffdf7" r="3"></circle>
-</svg>
+<!-- 圖片替換｜Day 3｜富士山滑雪：只替換下一行 img 的 src 值，改成可公開讀取的 HTTPS 圖片直連網址；保留 alt 與 class。 -->
+<img class="day-art" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyvjYr6LBCG0EsU3TZTP8lbaZQFN_MOB1TIGuaKRN_9Gq8CHe8F8CCxTbSSPeMVEP5wC1WxZSF9sF70zWdVALBAcYB8gnz_EOVyud38vFA_330qfHZW6SYQsbiSegQmk7gCC9vJUnbjnfaaGe5pRDmXfqqUA8_m1OfWAdLCHdDO9BQXtEYQRStHcMNMKE/s1349/5.png" alt="富士山、雪花與滑雪者插畫" loading="lazy" />
 </aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day3-title">富士山 YETI 滑雪・新宿採購</h2><div class="day-date">11 / 17 TUE · DAY 03</div></div>
@@ -263,21 +198,8 @@ h1 span{color:var(--terracotta);display:block}
 </section>
 <section aria-labelledby="day4-title" class="day-card" id="day4">
 <aside class="art-panel gold">
-<svg aria-label="紅磚車站與購物袋插畫" class="day-art" role="img" viewbox="0 0 220 190">
-<circle cx="177" cy="39" fill="#f4d7a1" r="20"></circle>
-<path d="M21 143V70l89-35 89 35v73z" fill="#c98366" stroke="#a86852" stroke-linejoin="round" stroke-width="2.5"></path>
-<path d="M15 72l95-40 95 40" fill="none" stroke="#a86852" stroke-linecap="round" stroke-width="4"></path>
-<path d="M33 83h22v26H33zm37 0h22v26H70zm56 0h22v26h-22zm37 0h22v26h-22z" fill="#f6e9d7" stroke="#a86852" stroke-width="2"></path>
-<path d="M92 143v-25a18 18 0 0 1 36 0v25z" fill="#f3dfbd" stroke="#a86852" stroke-width="2"></path>
-<path d="M21 144h178" stroke="#a86852" stroke-linecap="round" stroke-width="3"></path>
-<!-- shopping bags -->
-<path d="M44 132h34l-3 39H47z" fill="#fffaf0" stroke="#6f846e" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M53 132v-8a8 8 0 0 1 16 0v8" fill="none" stroke="#6f846e" stroke-width="2"></path>
-<path d="M141 132h32l-3 39h-26z" fill="#e6eee1" stroke="#6f846e" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M148 132v-8a8 8 0 0 1 16 0v8" fill="none" stroke="#6f846e" stroke-width="2"></path>
-<path d="M55 148h11m-8 6h7m82-5h13m-11 7h10" stroke="#d48668" stroke-linecap="round" stroke-width="2"></path>
-<path d="M105 15l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#fff8eb"></path>
-</svg>
+<!-- 圖片替換｜Day 4｜紅磚車站與購物：只替換下一行 img 的 src 值，改成可公開讀取的 HTTPS 圖片直連網址；保留 alt 與 class。 -->
+<img class="day-art" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYDoNuHRv0TqsAY6hyBaGk4g1Aih-iJI2oFFu7Nn96UyNNlxuUSGLtcpxGeJn4690MTqB3tivlI9y4FuPG7eBBgLldiSp8oAIVaZbJlOxn6H0bttme_15mQmSx_2XACtfN0qc4QoA22G-emg8nolHV-SM3YCkG_3lHI4jysJdApofbMXzRlIseqmn7bww/s1349/6.png" alt="紅磚車站與購物袋插畫" loading="lazy" />
 </aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day4-title">木更津 Outlet・東京車站購物</h2><div class="day-date">11 / 18 WED · DAY 04</div></div>
@@ -288,19 +210,8 @@ h1 span{color:var(--terracotta);display:block}
 </section>
 <section aria-labelledby="day5-title" class="day-card" id="day5">
 <aside class="art-panel lilac">
-<svg aria-label="日式神社、石板小巷與愛心插畫" class="day-art" role="img" viewbox="0 0 220 190">
-<circle cx="164" cy="41" fill="#f2d6a4" r="20"></circle>
-<path d="M25 147V88h170v59" fill="#f7f1e7" stroke="#aa9eaf" stroke-width="2"></path>
-<path d="M16 91h188l-20-15H36z" fill="#d48668" stroke="#a86f58" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M37 75h146M49 69h122" stroke="#a86f58" stroke-linecap="round" stroke-width="3"></path>
-<path d="M40 91v57m140-57v57" stroke="#aa9eaf" stroke-linecap="round" stroke-width="6"></path>
-<path d="M86 147v-27a24 24 0 0 1 48 0v27" fill="#e5e1eb" stroke="#aa9eaf" stroke-width="2"></path>
-<path d="M93 124h34m-28-7h22" stroke="#aa9eaf" stroke-width="2"></path>
-<path d="M19 161l42-10 23 10 30-9 31 9 35-11 22 11" fill="none" stroke="#aa9eaf" stroke-linecap="round" stroke-width="2"></path>
-<path d="M67 171l10-12 10 12m24 0 10-12 10 12m22 0 10-12 10 12" fill="none" stroke="#c6bdcf" stroke-linecap="round" stroke-width="2"></path>
-<path d="M77 44c-8-8-19 4-9 13l9 8 9-8c10-9-1-21-9-13z" fill="#d48668"></path>
-<path d="M139 57l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#9cae9a"></path>
-</svg>
+<!-- 圖片替換｜Day 5｜神社與石板小巷：只替換下一行 img 的 src 值，改成可公開讀取的 HTTPS 圖片直連網址；保留 alt 與 class。 -->
+<img class="day-art" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMs8FdK2Xz42dP1gyxnd3Q9q1SEFyh4kqwDh7dwhwVAYE3xL2Hpdl2qQEIODzVuvpIme2ycq8uqNx_4CCJdAAec8VUM1-uh1yocgdRLouWFwkX5uLmUtZ7KYpii8a_amgcVIQevm-rf3rEg4PkX9mmN_rTci8eH-g72d51C58OuGAaoKI_4Rl4FGRCSbY/s1349/7.png" alt="日式神社、石板小巷與愛心插畫" loading="lazy" />
 </aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day5-title">神樂坂・赤城神社・搭機返台</h2><div class="day-date">11 / 19 THU · DAY 05</div></div>
@@ -309,13 +220,8 @@ h1 span{color:var(--terracotta);display:block}
 <div class="callout">♡ 17:00 的 Skyliner 是行程規劃時間，請務必確認已劃位的實際發車時間；若需要更早抵達機場，請相應提前離開市區。</div>
 </div>
 </section><section aria-labelledby="day6-title" class="day-card bookend" id="day6">
-<aside class="art-panel blue"><svg aria-label="小飛機、雲朵與家的插畫" class="day-art" role="img" viewbox="0 0 220 170">
-<circle cx="178" cy="35" fill="#f4d7a1" r="18"></circle><path d="M19 42q12-15 24 0 13-15 25 0" fill="none" stroke="#a2b7bd" stroke-linecap="round" stroke-width="3"></path><path d="M150 61q10-12 20 0 10-12 20 0" fill="none" stroke="#a2b7bd" stroke-linecap="round" stroke-width="3"></path>
-<path d="M43 111l42-15 46-40q7-5 10 2l-24 43 40 4q8 1 6 8l-50 5-19 27q-4 5-8 0l5-27-42 4q-10 0-6-11z" fill="#fffaf1" stroke="#718b94" stroke-linejoin="round" stroke-width="3"></path>
-<path d="M63 111l29-3m24-23l-12 20" stroke="#d48668" stroke-linecap="round" stroke-width="3"></path>
-<path d="M39 148v-28l31-22 31 22v28z" fill="#e4ece0" stroke="#71866f" stroke-linejoin="round" stroke-width="2.5"></path><path d="M31 121l39-29 39 29" fill="none" stroke="#71866f" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path><rect fill="#fffaf1" height="21" rx="2" stroke="#71866f" stroke-width="2" width="17" x="62" y="127"></rect>
-<path d="M160 120c-7-7-17 4-8 12l8 7 8-7c9-8-1-19-8-12z" fill="#d48668"></path><path d="M177 91l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#d6b66d"></path>
-</svg></aside>
+<aside class="art-panel blue"><!-- 圖片替換｜回程｜飛機、雲朵與家：只替換下一行 img 的 src 值，改成可公開讀取的 HTTPS 圖片直連網址；保留 alt 與 class。 -->
+<img class="day-art wide" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTqslP9EMoCwr6o9SlQeUrjtg37MVYxgmGnXL8TX2g7Mk7WobmVaVHg-I6dj-uORpJyRqzns5y9T4BXzBuCOvPtjiqrkrjFj-Kve2esDrH1_6kWQi3NLv-cT5odLv-u8UCwzdYgjQ2Q_owCoJsz2vCktUwmG9ewNwoqkTtOCPl2FAsNB9Asz2g3NBaXFc/s1349/8.png" alt="小飛機、雲朵與家的插畫" loading="lazy" /></aside>
 <div class="day-content">
 <div class="section-heading"><h2 id="day6-title">回到台灣・旅程的甜甜收尾</h2><div class="day-date">11 / 20 FRI · HOME</div></div>
 <p class="day-intro">夜班機抵達桃園後，還有最後一段回家的路。先領好行李，再確認客運乘車處，平安把這趟一週年回憶帶回家。</p>
